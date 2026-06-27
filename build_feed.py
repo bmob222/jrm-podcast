@@ -45,15 +45,17 @@ EPISODES = [
               "talk gets us into trouble and weakens our authority over the enemy, and why watching what you "
               "say is a key to walking in victory.")},
     {"file": "ep02_2025-10-12_sunday-message.mp3", "ep": 2,
-     "title": "Sunday Message — October 12, 2025",
+     "title": "A Better Covenant, Better Promises",
      "pub": "Sun, 12 Oct 2025 12:00:00 -0400",
-     "desc": ("A full Sunday message from Pastor Jesse Rich — uncompromised King James Bible teaching to "
-              "build your faith and send you out stronger.")},
+     "desc": ("Pastor Jesse Rich teaches on the better covenant we have in Christ — established on better "
+              "promises (Hebrews 8). Divine healing, divine health, and divine protection (Psalm 91) are "
+              "covenant benefits that already belong to you. Anchored in Hebrews 8 and Isaiah 61.")},
     {"file": "ep01_2025-09-07_sunday-message.mp3", "ep": 1,
-     "title": "Sunday Message — September 7, 2025",
+     "title": "His Word Is Health to Your Flesh",
      "pub": "Sun, 07 Sep 2025 12:00:00 -0400",
-     "desc": ("A full Sunday message from Pastor Jesse Rich — uncompromised King James Bible teaching to "
-              "build your faith and send you out stronger.")},
+     "desc": ("Pastor Jesse Rich opens Proverbs 4 — God's Word is life and health to all your flesh. Learn "
+              "why putting Scripture first changes everything, and the truth about where sickness really "
+              "comes from (hint: not from God).")},
 ]
 
 
