@@ -56,6 +56,29 @@ EPISODES = [
      "desc": ("Pastor Jesse Rich opens Proverbs 4 — God's Word is life and health to all your flesh. Learn "
               "why putting Scripture first changes everything, and the truth about where sickness really "
               "comes from (hint: not from God).")},
+
+    # ---- Conquering Fear — bonus shorts (Daily Word) ----
+    {"file": "short_01_fear_oxygen.mp3", "type": "bonus", "title": "Fear Needs Oxygen",
+     "pub": "Mon, 16 Jun 2026 08:00:00 -0400",
+     "desc": "Like a fire-eater's torch, fear needs oxygen to survive. Pastor Jesse Rich on starving your fear instead of feeding it. (Conquering Fear series)"},
+    {"file": "short_02_kill_fear.mp3", "type": "bonus", "title": "How to Kill Fear: Decisive Action",
+     "pub": "Tue, 17 Jun 2026 08:00:00 -0400",
+     "desc": "The only way to get rid of fear is to face it head-on with immediate, decisive action. A short, punchy word from Pastor Jesse Rich. (Conquering Fear series)"},
+    {"file": "short_03_out_of_boat.mp3", "type": "bonus", "title": "Get Out of the Boat",
+     "pub": "Wed, 18 Jun 2026 08:00:00 -0400",
+     "desc": "Peter did what no one else dared — he stepped out of the boat and walked on water. Pastor Jesse Rich on leaving your comfort zone. (Conquering Fear series)"},
+    {"file": "short_04_make_a_list.mp3", "type": "bonus", "title": "Make a Fear List",
+     "pub": "Thu, 19 Jun 2026 08:00:00 -0400",
+     "desc": "Fear will lock you up. Pastor Jesse Rich gives a practical first step: write down everything you don't do because you're afraid. (Conquering Fear series)"},
+    {"file": "short_05_wrong_not_blessed.mp3", "type": "bonus", "title": "It's Wrong Not to Be Blessed",
+     "pub": "Fri, 20 Jun 2026 08:00:00 -0400",
+     "desc": "Success, health, joy, peace — God gave them to you. Pastor Jesse Rich on claiming the gifts that already belong to you. (Conquering Fear series)"},
+    {"file": "short_06_wasting_life.mp3", "type": "bonus", "title": "Don't Waste Your Life in the Comfort Zone",
+     "pub": "Sat, 21 Jun 2026 08:00:00 -0400",
+     "desc": "You're wasting the abundant life God gave you by staying where you're comfortable. A short challenge from Pastor Jesse Rich. (Conquering Fear series)"},
+    {"file": "short_07_selfish.mp3", "type": "bonus", "title": "It's Selfish Not to Step Out",
+     "pub": "Sun, 22 Jun 2026 08:00:00 -0400",
+     "desc": "When you hold back in fear, the world misses what God put in you. Pastor Jesse Rich on why stepping out is unselfish. (Conquering Fear series)"},
 ]
 
 
@@ -69,6 +92,8 @@ items = []
 for e in EPISODES:
     fp = AUDIO / e["file"]
     size = fp.stat().st_size
+    etype = e.get("type", "full")
+    epnum = f"\n      <itunes:episode>{e['ep']}</itunes:episode>" if etype == "full" and e.get("ep") else ""
     items.append(f"""    <item>
       <title>{escape(e['title'])}</title>
       <itunes:title>{escape(e['title'])}</itunes:title>
@@ -78,9 +103,8 @@ for e in EPISODES:
       <enclosure url="{PUB}/audio/{e['file']}" length="{size}" type="audio/mpeg"/>
       <guid isPermaLink="false">jrm-{e['file']}</guid>
       <pubDate>{e['pub']}</pubDate>
-      <itunes:duration>{dur_hhmmss(fp)}</itunes:duration>
-      <itunes:episode>{e['ep']}</itunes:episode>
-      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:duration>{dur_hhmmss(fp)}</itunes:duration>{epnum}
+      <itunes:episodeType>{etype}</itunes:episodeType>
       <itunes:explicit>false</itunes:explicit>
     </item>""")
 
