@@ -97,7 +97,7 @@ feed = f"""<?xml version="1.0" encoding="UTF-8"?>
       <itunes:name>Jesse Rich Ministries</itunes:name>
       <itunes:email>{OWNER_EMAIL}</itunes:email>
     </itunes:owner>
-    <itunes:image href="{PUB}/art/jrm_podcast_cover_3000.png"/>
+    <itunes:image href="{PUB}/art/jrm_cover_v2_cross.png"/>
     <itunes:category text="Religion &amp; Spirituality">
       <itunes:category text="Christianity"/>
     </itunes:category>
