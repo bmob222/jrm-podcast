@@ -25,6 +25,15 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep4_worship_miracle.mp3", "ep": 4,
+     "title": "Worship Brings the Miracle — The Canaanite Woman's Faith",
+     "pub": "Sun, 28 Jun 2026 12:00:00 -0400",
+     "desc": ("The Canaanite woman had no covenant — she wasn't Jewish, and Jesus hadn't yet paid the "
+              "salvation price — yet she received her miracle simply by worshiping the Lord (Matthew 15). "
+              "Pastor Jesse Rich teaches that worship is the key that moves the hand of God: ten lepers "
+              "were healed but only the one who returned to worship was made whole, embarrassment is fear "
+              "from the enemy that boldness defeats, and how to recognize Satan's voice and guard your walk. "
+              "A faith-building message on worshiping your way into everything Jesus has already provided.")},
     {"file": "ep2_take_control.mp3", "ep": 3,
      "title": "Living the Abundant Life",
      "pub": "Thu, 25 Jun 2026 12:00:00 -0400",
