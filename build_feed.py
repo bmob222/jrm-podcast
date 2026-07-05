@@ -25,6 +25,15 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep5_lifestyle_of_worship.mp3", "ep": 5,
+     "title": "Develop a Lifestyle of Worship",
+     "pub": "Sun, 05 Jul 2026 12:00:00 -0400",
+     "desc": ("What you do in secret, God rewards openly (Matthew 6). Pastor Jesse Rich teaches how to "
+              "develop a daily lifestyle of worship — bowing your knees and lifting your hands to God in "
+              "the privacy of your own home, morning and night (Psalm 89, Psalm 92). Learn why gratitude "
+              "and worship — not protests — are how the church wins its battles, how to eliminate "
+              "complaining, and why a life of private worship brings God's open reward. Includes communion "
+              "and a prayer of salvation.")},
     {"file": "ep4_worship_miracle.mp3", "ep": 4,
      "title": "Worship Brings the Miracle — The Canaanite Woman's Faith",
      "pub": "Sun, 28 Jun 2026 12:00:00 -0400",
