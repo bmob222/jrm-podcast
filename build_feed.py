@@ -25,6 +25,16 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep6_guard_your_mouth.mp3", "ep": 6,
+     "title": "Guard Your Mouth — Walking in Love Brings Divine Health",
+     "pub": "Sun, 12 Jul 2026 12:00:00 -0400",
+     "desc": ("Divine health isn't only about what you eat or how often you hit the gym — Pastor Jesse "
+              "Rich teaches that it hinges on your mouth. From Jude 20-21 and 1 Peter 3, learn why "
+              "walking in love and refraining your tongue from evil is the key to living long and living "
+              "well: how the enemy uses gossip, judgment, and offense to hinder your prayers and open the "
+              "door to sickness; why you must take authority over the devil in your home, on your job, and "
+              "even over the weather; and how quick repentance — 'Lord, forgive me' — keeps you protected. "
+              "Includes a prayer to receive Jesus and a prayer for healing.")},
     {"file": "ep5_lifestyle_of_worship.mp3", "ep": 5,
      "title": "Develop a Lifestyle of Worship",
      "pub": "Sun, 05 Jul 2026 12:00:00 -0400",
