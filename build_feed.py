@@ -25,6 +25,18 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep7_praying_in_tongues.mp3", "ep": 7,
+     "title": "Praying in Tongues — Power for Your Breakthrough",
+     "pub": "Tue, 14 Jul 2026 12:00:00 -0400",
+     "desc": ("'You shall receive power' (Acts 1:8). Pastor Jesse Rich teaches that the baptism of the Holy "
+              "Spirit and praying in tongues is the gift God wants every believer to have — and the power "
+              "is activated when you pray in the Spirit. From Jude 20, Isaiah 28, Romans 8:26-28 and 1 "
+              "Corinthians 14, learn why praying in tongues builds up your faith, gives you direction, and "
+              "prays the perfect will of God when you don't know what to pray; how your problems are simply "
+              "signals showing where you're lacking in your prayer life; and the unforgettable testimony of "
+              "Norvel Hayes — eleven businesses broke, down to his last $85, who kept praying in tongues "
+              "until God broke it all loose and made him a multi-millionaire. Includes prayers to receive "
+              "Jesus and to be filled with the Holy Spirit.")},
     {"file": "ep6_guard_your_mouth.mp3", "ep": 6,
      "title": "Guard Your Mouth — Walking in Love Brings Divine Health",
      "pub": "Sun, 12 Jul 2026 12:00:00 -0400",
