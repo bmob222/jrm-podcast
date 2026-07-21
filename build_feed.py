@@ -25,6 +25,20 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep8_a_prayer_project.mp3", "ep": 8,
+     "title": "A Prayer Project — Pray for Your Leaders, Pray Over Your Food",
+     "pub": "Tue, 21 Jul 2026 12:00:00 -0400",
+     "desc": ("From 1 Timothy 2 and 4, Pastor Jesse Rich lays out a practical prayer project every "
+              "believer can start today: pray first for your president and those in authority over you, "
+              "and watch what you say about them; then pray over everything you eat and drink, believing "
+              "it sanctified to nourish your body — the very thing that turned around a lifetime of "
+              "sickness for him after he was born again. Learn why the devil is defeated but not dead, "
+              "how to take authority over sickness, fear, anxiety and 'brain fog' the moment it shows up "
+              "instead of wondering what's going on; how Jesus spoke to the storm and expects you to "
+              "speak to your mountain; why praying in tongues (Jude 20) builds up your faith and is the "
+              "red flag when your faith runs low; and why faith works by love — so guard the decision "
+              "you make the moment you get offended. Includes prayers to receive Jesus Christ and for "
+              "healing.")},
     {"file": "ep7_praying_in_tongues.mp3", "ep": 7,
      "title": "Praying in Tongues — Power for Your Breakthrough",
      "pub": "Tue, 14 Jul 2026 12:00:00 -0400",
