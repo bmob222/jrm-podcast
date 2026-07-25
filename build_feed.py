@@ -25,6 +25,42 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep11_live0003.mp3", "ep": 11,
+     "title": "If You Have Faith, You Shall Say — Calling Things That Be Not",
+     "pub": "Sat, 25 Jul 2026 12:00:00 -0400",
+     "desc": ("Four times in the Gospels — Matthew 17:20, Matthew 21:21, Mark 11:23 and Luke 17:6 — "
+              "Jesus said the same thing: if you have faith, you shall SAY. Pastor Jesse Rich teaches "
+              "how to speak to your mountain instead of talking about it, and how Abraham (Romans 4:17) "
+              "called those things that be not as though they were until what was dead came alive. "
+              "Hear the testimony of the man who spoke to the mulberry tree in his driveway, the "
+              "Shunammite woman who wouldn't talk death, and the attorney who refused to accept a "
+              "negative report — and kept his job. If you want things different in your life, call "
+              "them different: call yourself healthy, call your finances blessed, and put your name in "
+              "the scripture. Includes a prayer to receive Jesus Christ as Lord.")},
+    {"file": "ep10_live0002.mp3", "ep": 10,
+     "title": "Your Youth Renewed Like the Eagle's — The Power of Your Words",
+     "pub": "Sat, 25 Jul 2026 11:00:00 -0400",
+     "desc": ("Bless the Lord, O my soul, and forget not all His benefits (Psalm 103) — He forgives, "
+              "He heals, He redeems, and He renews your youth like the eagle's. Pastor Jesse Rich takes "
+              "you from James 3 (the bit, the rudder, and the tongue) to Caleb at 85 still saying "
+              "'give me this mountain,' to show that your body — and your whole life — goes the way of "
+              "your mouth. Learn to stop speaking against your body and start speaking life over it: "
+              "'Let the weak say I am strong,' 'I go from strength to strength,' 'I shall not die but "
+              "live and declare the works of the Lord' (Psalm 118:17). Never be embarrassed about your "
+              "covenant — stand confident in the Word of God, keep thanking God every day, and make "
+              "your mouth work for you. Includes a prayer to receive Jesus Christ as Lord.")},
+    {"file": "ep9_live0001.mp3", "ep": 9,
+     "title": "By His Stripes You Were Healed — Receiving Divine Healing by Faith",
+     "pub": "Sat, 25 Jul 2026 10:00:00 -0400",
+     "desc": ("Isaiah prophesied it (Isaiah 53:4-5), Matthew confirmed it (Matthew 8:17), and Peter put "
+              "it in the past tense: by whose stripes you WERE healed (1 Peter 2:24). Pastor Jesse Rich "
+              "shares how he kept confessing that verse as a brand-new believer until healing became a "
+              "reality, and teaches how to receive divine healing by faith — not by being good enough. "
+              "From 3 John 2 ('I wish above all things that thou mayest prosper and be in health'), "
+              "Mark 11:23 (speak to the mountain), Matthew 18:19 (the point of contact), and James "
+              "5:14-15 (the prayer of faith), learn to take authority over sickness and pain the moment "
+              "it shows up, keep the switch of faith on, and refuse doubt — because Jesus loves you so "
+              "much He doesn't want you hurt. Includes a prayer to receive Jesus Christ as Lord.")},
     {"file": "ep8_a_prayer_project.mp3", "ep": 8,
      "title": "A Prayer Project — Pray for Your Leaders, Pray Over Your Food",
      "pub": "Tue, 21 Jul 2026 12:00:00 -0400",
