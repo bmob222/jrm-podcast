@@ -25,6 +25,20 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep12_live0020.mp3", "ep": 12,
+     "title": "Take Full Responsibility — Stand on Chapter and Verse",
+     "pub": "Sun, 26 Jul 2026 12:00:00 -0400",
+     "desc": ("Pastor Jesse Rich opens in Ephesians 4:11-15 and 1 Corinthians 12:28 on the ministry "
+              "gifts God set in the church and the ministry of helps, teaching that it is God's will "
+              "that every one of His children be taught who they are in Christ Jesus so they are no "
+              "longer tossed to and fro. He teaches the law of seed and harvest — you cannot buy a "
+              "miracle, you plant a seed — and Jesus' promise in Luke 6:38 that what you give comes "
+              "back good measure, pressed down, shaken together and running over. He then teaches "
+              "healing purchased at the whipping post: Jesus was beaten before He was ever crucified, "
+              "He was wounded for our transgressions, and by His stripes you were healed (Isaiah 53:5), "
+              "and how partaking of the Lord's body in communion is receiving that healing. The message "
+              "closes where it began — take full responsibility for your life, get a Bible, get the "
+              "Word inside of you, and speak God's Word over your life.")},
     {"file": "ep11_live0003.mp3", "ep": 11,
      "title": "If You Have Faith, You Shall Say — Calling Things That Be Not",
      "pub": "Sat, 25 Jul 2026 12:00:00 -0400",
