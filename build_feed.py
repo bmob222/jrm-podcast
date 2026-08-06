@@ -25,6 +25,21 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep13_2026-08-02_sunday-message.mp3", "ep": 13,
+     "title": "Attend to His Word — Health to All Your Flesh",
+     "pub": "Sun, 02 Aug 2026 12:00:00 -0400",
+     "desc": ("Pastor Jesse Rich teaches from Proverbs 4:20-22 on attending to God's Word — putting "
+              "the Word first, inclining your ear to it, and reading the scriptures out loud so your "
+              "own ears hear them, because they are life to those that find them and health to all "
+              "their flesh. From Matthew 12:34 he shows why: out of the abundance of the heart the "
+              "mouth speaks, so what you have put inside your spirit is what comes out of your mouth "
+              "when trouble hits and there is no time to think. He points to Jesus in the wilderness "
+              "answering Satan with 'it is written,' and teaches that the Word you know is the sword "
+              "of the Spirit and your line of defense — if you don't know the Word you can't quote "
+              "it, and if you can't quote it you can't defend yourself. He closes on using your mouth "
+              "to call those things which be not as though they were, and on God's will for His "
+              "children to prosper and be in health."),
+     },
     {"file": "ep12_live0020.mp3", "ep": 12,
      "title": "Take Full Responsibility — Stand on Chapter and Verse",
      "pub": "Sun, 26 Jul 2026 12:00:00 -0400",
