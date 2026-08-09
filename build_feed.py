@@ -25,6 +25,22 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep14_2026-08-09_sunday-service.mp3", "ep": 14,
+     "title": "It Wasn't God That Did This — Loosed from a Spirit of Infirmity",
+     "pub": "Sun, 09 Aug 2026 12:00:00 -0400",
+     "desc": ("Pastor Jesse Rich teaches from Matthew 17 and Luke 13 on where sickness and "
+              "oppression really come from — and Who sets people free. The woman bowed over "
+              "eighteen years was a daughter of Abraham 'whom Satan hath bound' — it wasn't God "
+              "that made her that way; Jesus called her, laid hands on her, and she was made "
+              "straight and glorified God. From Luke 10:19 he teaches the believer's authority "
+              "over all the power of the enemy: casting down the devil's thoughts and "
+              "suggestions in Jesus' name, staying built up by praying in the Spirit and a "
+              "lifestyle of praise, and guarding your family through prayer. Includes his "
+              "personal 9/11 testimony — 'don't go downtown, go uptown' — of how the inward "
+              "witness of the Holy Spirit kept him out of the towers, teaching from Acts 5 and "
+              "Acts 16 on dealing with demonic influence, the ministry of laying on of hands, "
+              "and a closing prayer to receive Jesus Christ as Lord."),
+     },
     {"file": "ep13_2026-08-02_sunday-message.mp3", "ep": 13,
      "title": "Attend to His Word — Health to All Your Flesh",
      "pub": "Sun, 02 Aug 2026 12:00:00 -0400",
