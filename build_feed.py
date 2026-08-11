@@ -25,6 +25,19 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep15_2026-08-11_evening-live.mp3", "ep": 15,
+     "title": "Speak to Your Mountain — Faith as a Grain of Mustard Seed",
+     "pub": "Tue, 11 Aug 2026 19:00:00 -0400",
+     "desc": ("From Matthew 15, 17 and 21: Pastor Jesse Rich teaches that faith is released "
+              "with words. Not what goes into the mouth defiles a man, but what comes out — "
+              "and what comes out of the mouth proceeds from the heart. When the disciples "
+              "could not cure the lunatic son, Jesus pointed to their unbelief: if ye have "
+              "faith as a grain of mustard seed, ye shall SAY unto this mountain, Remove "
+              "hence to yonder place, and it shall remove, and nothing shall be impossible "
+              "unto you. A Tuesday evening teaching on speaking to the mountain instead of "
+              "talking about it, keeping your words in agreement with God's Word, and "
+              "putting your faith to work with your mouth."),
+     },
     {"file": "ep14_2026-08-09_sunday-service.mp3", "ep": 14,
      "title": "It Wasn't God That Did This — Loosed from a Spirit of Infirmity",
      "pub": "Sun, 09 Aug 2026 12:00:00 -0400",
