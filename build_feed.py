@@ -25,6 +25,20 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep16_2026-08-16_camp-meeting-day1.mp3", "ep": 16,
+     "title": "Camp Meeting Night 1: Speak to the Mountain — Take Full Responsibility for Your Life",
+     "pub": "Sun, 16 Aug 2026 19:00:00 -0400",
+     "desc": ("Opening night of camp meeting. From Mark 11:23 and the Gospels, Pastor Jesse Rich "
+              "teaches that everything talks to you — sickness, lack, the storm — and the believer "
+              "answers back the way Jesus did: speaking to the mountain in Jesus' name. Jesus "
+              "answered the fig tree, spoke to the storm, and said whosoever shall SAY unto this "
+              "mountain, Be thou removed, and shall not doubt in his heart, shall have whatsoever "
+              "he saith. A teaching on using your God-given authority instead of excuses: you can "
+              "have an excuse, but you will not have a testimony. Includes a testimony of a "
+              "little girl instantly healed when her mother commanded it in the name of Jesus, "
+              "why God wants the Word in you so it comes out when your mind is not thinking, and "
+              "a closing invitation to receive Jesus Christ as Lord."),
+     },
     {"file": "ep15_2026-08-11_evening-live.mp3", "ep": 15,
      "title": "Speak to Your Mountain — Faith as a Grain of Mustard Seed",
      "pub": "Tue, 11 Aug 2026 19:00:00 -0400",
