@@ -25,6 +25,91 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep24_2026-08-20_camp-meeting-thu-pm.mp3", "ep": 24,
+     "title": "Camp Meeting Day 5 Evening: Covenant Prosperity — Isaac Sowed in the Year of Famine",
+     "pub": "Thu, 20 Aug 2026 19:00:00 -0400",
+     "desc": ("Closing night of camp meeting. A teaching on covenant prosperity: when we bring the "
+              "tithe we worship God and acknowledge that everything we have is His — and everything "
+              "He has is ours, a covenant sealed in the blood of Jesus. From the patriarchs: Abraham "
+              "very rich in cattle, silver and gold; Isaac exceedingly rich because he sowed in the "
+              "year of famine and received a hundredfold the same year. The believer's covenant does "
+              "not depend on natural circumstances — famine, inflation or recession — because in "
+              "Christ we are on a whole other system than the world's."),
+     },
+    {"file": "ep23_2026-08-20_camp-meeting-thu-am.mp3", "ep": 23,
+     "title": "Camp Meeting Day 5 Morning: Give Earnest Heed — The Grace of Giving",
+     "pub": "Thu, 20 Aug 2026 10:30:00 -0400",
+     "desc": ("Morning session on Hebrews 2:1 and 2 Corinthians 8: give earnest heed to the things "
+              "you have heard, lest at any time you let them slip — even great ministers have let "
+              "the Word slip away. Then into the grace of giving: the churches of Macedonia, whose "
+              "deep poverty abounded unto the riches of their liberality, and Jesus, who though He "
+              "was rich became poor for our sakes, that we through His poverty might be rich. "
+              "Worshiping the Lord with the tithe says: everything I have is Yours — and everything "
+              "You have is mine."),
+     },
+    {"file": "ep22_2026-08-19_camp-meeting-wed-pm.mp3", "ep": 22,
+     "title": "Camp Meeting Day 4 Evening: The Power of the Tithe — Worship the Lord with Your Increase",
+     "pub": "Wed, 19 Aug 2026 19:00:00 -0400",
+     "desc": ("An evening teaching on the tithe: the first ten percent of all your increase, holy "
+              "unto the Lord — not just a donation, but worship that goes out before the Father. "
+              "We don't only sing, praise and lift our hands; we worship God with the tithe and the "
+              "offerings. There is power in the freedom of tithing — it is not bondage, it is "
+              "freedom — and the covenant believer who understands that power finds it easy to "
+              "honor God with the firstfruits."),
+     },
+    {"file": "ep21_2026-08-19_camp-meeting-wed-am.mp3", "ep": 21,
+     "title": "Camp Meeting Day 4 Morning: Sow in the Famine — Show Your Faith by Your Actions",
+     "pub": "Wed, 19 Aug 2026 10:30:00 -0400",
+     "desc": ("If you have a need, sow a seed. A morning teaching on giving in hard times: when "
+              "the bank account is low is not the time to back off but the time to show your faith "
+              "by your words and your actions — because Jesus is looking for faith, and it is "
+              "through faith and patience that we inherit the promises. From Elijah and the widow "
+              "of Zarephath — a single mother at the bottom of the barrel whose last meal became a "
+              "supply through the famine — and the Macedonian churches whose deep poverty did not "
+              "keep them from giving."),
+     },
+    {"file": "ep20_2026-08-18_camp-meeting-tue-pm.mp3", "ep": 20,
+     "title": "Camp Meeting Day 3 Evening: This Is Real — Tongues, Interpretation, and Believing for Miracles",
+     "pub": "Tue, 18 Aug 2026 19:00:00 -0400",
+     "desc": ("An evening service opening with a remarkable testimony: a message in tongues and "
+              "its interpretation checked by an AI company worker — the tongue was an African "
+              "dialect and the interpretation was word for word. 'This is real.' The service moves "
+              "into the grace of God that always works, expectation for miracles all week, and "
+              "God showing His people who they are in Christ — because when the presence of God "
+              "and faith get together, miracles start happening."),
+     },
+    {"file": "ep19_2026-08-18_camp-meeting-tue-am.mp3", "ep": 19,
+     "title": "Camp Meeting Day 3 Morning: There Has to Be More — Breaking the Poverty Mindset",
+     "pub": "Tue, 18 Aug 2026 10:30:00 -0400",
+     "desc": ("A morning teaching confronting religious tradition that says poverty is godliness — "
+              "'you keep them humble, Lord, we'll keep them poor.' A congregation rarely rises "
+              "above the economic level of its pastor, which is exactly why the devil wants the "
+              "shepherd kept poor. From a testimony of growing up hearing only salvation preached "
+              "every Sunday — 'I love being saved, but there has to be more' — into what the Word "
+              "actually teaches about God's will for His children to prosper and be in health."),
+     },
+    {"file": "ep18_2026-08-17_camp-meeting-mon-pm.mp3", "ep": 18,
+     "title": "Camp Meeting Day 2 Evening: A Good Father — Healing and Financial Miracles",
+     "pub": "Mon, 17 Aug 2026 19:00:00 -0400",
+     "desc": ("Our good, good Father wants His children healthy and prosperous — 'I wish above all "
+              "things that thou mayest prosper and be in health' (3 John 2). If we being evil know "
+              "how to give good gifts to our children, how much more our Father in heaven. An "
+              "evening of believing for miracles, with testimonies of healings in meetings across "
+              "Europe, Armenia, Portugal, Spain, London, Greece and Ireland this year, and a look "
+              "at Jesus' financial miracles — feeding the five thousand and more — showing both "
+              "sides of God's miracle provision: healing and prosperity."),
+     },
+    {"file": "ep17_2026-08-17_camp-meeting-mon-am.mp3", "ep": 17,
+     "title": "Camp Meeting Day 2 Morning: Run Doubt Off — Believe You Receive When You Pray",
+     "pub": "Mon, 17 Aug 2026 10:30:00 -0400",
+     "desc": ("This is where people usually crash and burn on believing God: they let doubt in. A "
+              "morning teaching on Mark 11:24 — believe you receive when you pray — and what to do "
+              "when the devil brings thoughts that you don't have it yet: tell doubt to go in "
+              "Jesus' name. Make your mind up before you release your faith that you're in for the "
+              "long haul, standing on nothing but God's Word. Pastor Jesse also shares his own "
+              "story of being born again in a Pentecostal church having never once heard the "
+              "gospel, an altar call, or hands laid on the sick in the church he grew up in."),
+     },
     {"file": "ep16_2026-08-16_camp-meeting-day1.mp3", "ep": 16,
      "title": "Camp Meeting Night 1: Speak to the Mountain — Take Full Responsibility for Your Life",
      "pub": "Sun, 16 Aug 2026 19:00:00 -0400",
