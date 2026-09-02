@@ -25,6 +25,18 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep25_2026-08-30_sunday-service.mp3", "ep": 25,
+     "title": "Sunday Service 8/30/26: Authority Over the Devil — Mark 5 and Faith as a Mustard Seed",
+     "pub": "Sun, 30 Aug 2026 12:00:00 -0400",
+     "desc": ("Sunday service from downtown Hartford. Pastor Jesse Rich opens in Mark 5 with the man "
+              "of the Gadarenes — bound with chains no man could hold, living among the tombs — set "
+              "free and in his right mind the moment Jesus spoke: come out of the man. Then to "
+              "Matthew 17, where the disciples could not cast the devil out of a father's son and "
+              "Jesus told them plainly why: because of your unbelief. If you have faith as a grain of "
+              "mustard seed, nothing shall be impossible unto you. A teaching on the believer's "
+              "authority in the name of Jesus over every unclean spirit, and on walking in faith "
+              "instead of unbelief."),
+     },
     {"file": "ep24_2026-08-20_camp-meeting-thu-pm.mp3", "ep": 24,
      "title": "Camp Meeting Day 5 Evening: Covenant Prosperity — Isaac Sowed in the Year of Famine",
      "pub": "Thu, 20 Aug 2026 19:00:00 -0400",
