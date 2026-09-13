@@ -25,6 +25,18 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep26_2026-09-13_sunday-service.mp3", "ep": 26,
+     "title": "Sunday Service 9/13/26: The Baptism in the Holy Spirit — Why Every Believer Should Pray in Tongues",
+     "pub": "Sun, 13 Sep 2026 12:00:00 -0400",
+     "desc": ("Sunday service from downtown Hartford. Pastor Jesse Rich teaches on the baptism in the Holy "
+              "Spirit from Luke 24:49, Acts 1, 2, 10 and 19, and 1 Corinthians 14: God wants every believer "
+              "to receive this gift as soon as they are saved and to pray in tongues daily. Praying in the "
+              "Spirit builds you up, magnifies God, gives you confidence, and opens the door to the "
+              "supernatural, and the Holy Spirit will give you direction in situations you don't know how "
+              "to handle. Then Romans 12:1-2: the Spirit and the Word always agree, so first do what the "
+              "Word says, then follow the inner witness. Closes with a call to receive Jesus Christ as Lord "
+              "from Romans 10:9-10."),
+     },
     {"file": "ep25_2026-08-30_sunday-service.mp3", "ep": 25,
      "title": "Sunday Service 8/30/26: Authority Over the Devil — Mark 5 and Faith as a Mustard Seed",
      "pub": "Sun, 30 Aug 2026 12:00:00 -0400",
