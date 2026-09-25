@@ -25,6 +25,19 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep27_2026-09-20_sunday-service.mp3", "ep": 27,
+     "title": "Sunday Service 9/20/26: Finding God's Perfect Will — Led by the Inward Witness",
+     "pub": "Sun, 20 Sep 2026 12:00:00 -0400",
+     "desc": ("Sunday service from downtown Hartford. Pastor Jesse Rich teaches from Romans 12:1-2, "
+              "1 John 5:9-10 and 1 Corinthians 2:14 on the difference between God's acceptable will and "
+              "His perfect will, and how to be led by the inward witness of the Holy Spirit. Your flesh, "
+              "your mind and the devil will work together against your spirit, so pray before major "
+              "decisions and never make a decision when you're angry, hurt or offended. Full of stories: "
+              "the website God never told him to start, the car he was told not to buy, getting cussed "
+              "out over a 35-cent tithe, and the homeowner who told a young carpet layer he belonged in "
+              "the ministry. Closes with prayer to step out and obey God, and a call to receive Jesus "
+              "Christ as Lord from Romans 10:9-10."),
+     },
     {"file": "ep26_2026-09-13_sunday-service.mp3", "ep": 26,
      "title": "Sunday Service 9/13/26: The Baptism in the Holy Spirit — Why Every Believer Should Pray in Tongues",
      "pub": "Sun, 13 Sep 2026 12:00:00 -0400",
