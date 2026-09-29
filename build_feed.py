@@ -25,6 +25,16 @@ CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, 
 
 # newest first; pubDate RFC-822
 EPISODES = [
+    {"file": "ep29_2026-09-06_sunday-service.mp3", "ep": 29,
+     "title": "Sunday Service 9/6/26: Get the Word in You — It Is Written",
+     "pub": "Sun, 06 Sep 2026 12:00:00 -0400",
+     "desc": ("Sunday service from downtown Hartford. Faith comes by hearing, and hearing by the Word of "
+              "God, so get the New Testament inside you and find out what Jesus purchased for you. Jesus "
+              "defeated the devil in the wilderness by quoting scripture: It is written. Pastor Jesse "
+              "Rich teaches on the sword of the Spirit, Matthew 12 and the empty house, and the man of "
+              "the Gadarenes set free in Mark 5. Don't live by your feelings, be careful who you walk "
+              "with, and keep the Word ready in your mouth for the moment you need it. Closes with a call "
+              "to receive Jesus Christ as Lord from Romans 10.")},
     {"file": "ep28_2026-09-22_tuesday-service.mp3", "ep": 28,
      "title": "Tuesday Service 9/22/26: Bind the Strong Man — Speak to Your Mountain",
      "pub": "Tue, 22 Sep 2026 20:00:00 -0400",
