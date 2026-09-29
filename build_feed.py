@@ -392,9 +392,22 @@ def dur_hhmmss(f):
     s = int(s); return f"{s//3600:02d}:{(s%3600)//60:02d}:{s%60:02d}"
 
 
+# Sep 29 2026: the Pages site hit ~955 MB of its 1 GB cap. New episodes are hosted as
+# assets on the "audio" GitHub Release instead (no site cap; range requests work).
+# Their mp3s live in audio_release/ (gitignored) so the feed can still read size/duration.
+# Episodes added by sermon_watch.py live in episodes_auto.json (newest first).
+AUDIO_REL = BASE / "audio_release"
+REL_URL = "https://github.com/bmob222/jrm-podcast/releases/download/audio"
+_auto = BASE / "episodes_auto.json"
+if _auto.exists():
+    import json as _json
+    EPISODES = _json.loads(_auto.read_text()) + EPISODES
+
 items = []
 for e in EPISODES:
-    fp = AUDIO / e["file"]
+    rel = e.get("host") == "release"
+    fp = (AUDIO_REL if rel else AUDIO) / e["file"]
+    url = f"{REL_URL}/{e['file']}" if rel else f"{PUB}/audio/{e['file']}"
     size = fp.stat().st_size
     etype = e.get("type", "full")
     epnum = f"\n      <itunes:episode>{e['ep']}</itunes:episode>" if etype == "full" and e.get("ep") else ""
@@ -404,7 +417,7 @@ for e in EPISODES:
       <description>{escape(e['desc'] + CTA)}</description>
       <itunes:summary>{escape(e['desc'] + CTA)}</itunes:summary>
       <itunes:author>Pastor Jesse Rich</itunes:author>
-      <enclosure url="{PUB}/audio/{e['file']}" length="{size}" type="audio/mpeg"/>
+      <enclosure url="{url}" length="{size}" type="audio/mpeg"/>
       <guid isPermaLink="false">jrm-{e['file']}</guid>
       <pubDate>{e['pub']}</pubDate>
       <itunes:duration>{dur_hhmmss(fp)}</itunes:duration>{epnum}
