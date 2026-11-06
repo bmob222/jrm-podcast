@@ -74,7 +74,32 @@ EOF
   echo "all enclosures OK"
 }
 
+SW_LOCK="$HOME/jrm_autopost/sermon_watch_state.json.runlock"
+SW_STOP="$HOME/social_ops/STOP_JRM_SERMON"
+CREATED_STOP=""
+cleanup_stop() { if [ -n "$CREATED_STOP" ]; then rm -f "$SW_STOP"; fi; }
+sermon_watch_idle() {   # 0 when no sermon_watch run holds its run lock
+  /usr/bin/python3 - "$SW_LOCK" <<'EOF'
+import fcntl, sys
+f = open(sys.argv[1], "a+")
+try:
+    fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+except OSError:
+    sys.exit(1)
+EOF
+}
+pause_sermon_watch() {  # sermon_watch commits + pushes this repo too: never run both at once
+  if [ ! -e "$SW_STOP" ]; then
+    : > "$SW_STOP"; CREATED_STOP=1; trap cleanup_stop EXIT
+    echo "paused sermon_watch for the migration ($SW_STOP, removed again on exit)"
+  fi
+  sermon_watch_idle || die "a sermon_watch run is in progress — retry when it has finished"
+  sleep 3   # a run that passed its kill-switch check just before the STOP file appeared now holds the lock
+  sermon_watch_idle || die "a sermon_watch run is in progress — retry when it has finished"
+}
+
 preflight() {
+  pause_sermon_watch
   gh auth status >/dev/null 2>&1 || die "gh is not authenticated (gh auth login / gh auth setup-git)"
   git diff --quiet && git diff --cached --quiet || die "uncommitted changes to tracked files — commit or stash first"
   git fetch -q origin
