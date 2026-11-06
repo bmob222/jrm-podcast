@@ -1,13 +1,64 @@
 #!/usr/bin/env python3
-"""Generate the Jesse Rich Ministries podcast RSS feed (Spotify/Apple compatible)."""
-import os, subprocess
-from pathlib import Path
-from xml.sax.saxutils import escape
+"""Generate the Jesse Rich Ministries podcast RSS feed (Spotify / Apple / Podcast Index compatible).
 
-BASE = Path(__file__).parent
+v2 — Nov 6 2026 redesign (track T5):
+  * Topic-first titles: <title> '{Topic} ({Scripture}) | Pastor Jesse Rich', <itunes:title> '{Topic} ({Scripture})';
+    the service type + date moved into the first line of the description.
+  * GUIDs NEVER change: guid = 'jrm-' + file name for every episode, whatever the title or host. Retired GUIDs
+    (retired_episodes.json, e.g. the duplicate ep36) can never come back.
+  * Chapters as plain '(00:00) Label' lines (>= 3, first at 00:00, >= 30 s apart) — Spotify and Apple read these —
+    plus content:encoded show notes with YouTube / giving / site links.
+  * Podcasting 2.0: podcast:guid, podcast:locked, podcast:funding, podcast:person, podcast:transcript (WebVTT made
+    from the whisper transcript, small files under transcripts/ on Pages); atom:link rel=self; lastBuildDate; <image>.
+  * Unique itunes:episode numbers (two legacy collisions resolved, see EP_NUMBER_OVERRIDE); pubDate offsets computed
+    with zoneinfo America/New_York (EST after Nov 1) and weekday names re-derived (two legacy dates had wrong days).
+
+HOSTING — never commit a new MP3 into audio/: the GitHub Pages site has a hard 1 GB cap (it is at ~950 MB).
+  * New episodes: MP3 in audio_release/ (gitignored) + asset on the GitHub Release 'audio', entry in
+    episodes_auto.json with "host": "release" (sermon_watch.py does all of this).
+  * Legacy Pages MP3s (audio/) move to the Release with migrate_audio_to_release.sh; it writes
+    audio_release_manifest.json and every file listed there is served from the Release (same GUID).
+
+    python3 build_feed.py            # write feed.xml (atomically) after validating it; exit 1 on any problem
+    python3 build_feed.py --check    # build + validate only, feed.xml untouched
+
+Python 3.9+ (stdlib only).
+"""
+import email.utils
+import json
+import os
+import re
+import subprocess
+import sys
+import tempfile
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta
+from pathlib import Path
+from xml.sax.saxutils import escape, quoteattr
+
+try:
+    from zoneinfo import ZoneInfo
+    TZ = ZoneInfo("America/New_York")
+except Exception:  # pragma: no cover
+    TZ = None
+
+BASE = Path(__file__).resolve().parent
 AUDIO = BASE / "audio"
+AUDIO_REL = BASE / "audio_release"
+TRANSCRIPTS = BASE / "transcripts"
+MANIFEST = BASE / "audio_release_manifest.json"
+RETIRED = BASE / "retired_episodes.json"
 PUB = "https://bmob222.github.io/jrm-podcast"
+FEED_URL = PUB + "/feed.xml"
+REL_URL = "https://github.com/bmob222/jrm-podcast/releases/download/audio"
 OWNER_EMAIL = "customerservice@enemiesbynature.com"   # Spotify verification email
+COVER_URL = PUB + "/art/jrm_cover_v2_cross.png"
+SITE = "https://jesserichministries.com"
+GIVING_URL = "https://jesserichministries.com/donation.htm"
+YT_FULL_SERMONS = "https://www.youtube.com/playlist?list=PLOaiQv0ktN3A"
+PODCAST_GUID = "ec50d07f-0504-5f21-9af5-e7bc6d12564e"   # UUIDv5(podcast ns, 'bmob222.github.io/jrm-podcast/feed.xml')
+LOCKED = "yes"   # set to "no" only while deliberately moving the show to another host
+HOST_NAME = "Pastor Jesse Rich"
 
 CHANNEL_DESC = (
     "No-compromise, faith-building teaching from Pastor Jesse Rich to help you live the victorious, "
@@ -20,10 +71,10 @@ CHANNEL_DESC = (
     "Jesse Rich Ministries is a 501(c)(3) nonprofit."
 )
 
-CTA = ("\n\nWorship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, CT. "
+CTA = ("Worship with us — Sundays 9:30 AM & Tuesdays 7:00 PM in Hartford, CT. "
        "More at JesseRichMinistries.com.")
 
-# newest first; pubDate RFC-822
+# newest first; pubDate RFC-822 (wall-clock Eastern time; the offset is recomputed below)
 EPISODES = [
     {"file": "ep29_2026-09-06_sunday-service.mp3", "ep": 29,
      "title": "Sunday Service 9/6/26: Get the Word in You — It Is Written",
@@ -386,69 +437,340 @@ EPISODES = [
 ]
 
 
-def dur_hhmmss(f):
-    s = float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",str(f)],
-                             capture_output=True, text=True).stdout.strip() or 0)
-    s = int(s); return f"{s//3600:02d}:{(s%3600)//60:02d}:{s%60:02d}"
+# ---- v2 metadata for the hand-written episodes above (titles above are kept only as a fallback) ----
+# file -> (service label or None = derive from weekday, topic, main scripture or "", show the date?)
+LEGACY_META = {
+    "ep29_2026-09-06_sunday-service.mp3": ("Sunday Service", "Get the Word in You: It Is Written", "Romans 10:17", True),
+    "ep28_2026-09-22_tuesday-service.mp3": ("Tuesday Service", "Bind the Strong Man: Speak to Your Mountain", "Matthew 12:29", True),
+    "ep27_2026-09-20_sunday-service.mp3": ("Sunday Service", "Finding God's Perfect Will: Led by the Inward Witness", "Romans 12:2", True),
+    "ep26_2026-09-13_sunday-service.mp3": ("Sunday Service", "Baptism in the Holy Spirit: Why Every Believer Should Pray in Tongues", "Luke 24:49", True),
+    "ep25_2026-08-30_sunday-service.mp3": ("Sunday Service", "Authority Over the Devil: Faith as a Grain of Mustard Seed", "Matthew 17:20", True),
+    "ep24_2026-08-20_camp-meeting-thu-pm.mp3": ("Camp Meeting Day 5 Evening", "Covenant Prosperity: Isaac Sowed in the Year of Famine", "Genesis 26:12", True),
+    "ep23_2026-08-20_camp-meeting-thu-am.mp3": ("Camp Meeting Day 5 Morning", "Give Earnest Heed: The Grace of Giving", "Hebrews 2:1", True),
+    "ep22_2026-08-19_camp-meeting-wed-pm.mp3": ("Camp Meeting Day 4 Evening", "The Power of the Tithe: Worship the Lord With Your Increase", "", True),
+    "ep21_2026-08-19_camp-meeting-wed-am.mp3": ("Camp Meeting Day 4 Morning", "Sow in the Famine: Show Your Faith by Your Actions", "1 Kings 17", True),
+    "ep20_2026-08-18_camp-meeting-tue-pm.mp3": ("Camp Meeting Day 3 Evening", "This Is Real: Tongues, Interpretation and Believing for Miracles", "", True),
+    "ep19_2026-08-18_camp-meeting-tue-am.mp3": ("Camp Meeting Day 3 Morning", "There Has to Be More: Breaking the Poverty Mindset", "3 John 2", True),
+    "ep18_2026-08-17_camp-meeting-mon-pm.mp3": ("Camp Meeting Day 2 Evening", "A Good Father: Healing and Financial Miracles", "3 John 2", True),
+    "ep17_2026-08-17_camp-meeting-mon-am.mp3": ("Camp Meeting Day 2 Morning", "Run Doubt Off: Believe You Receive When You Pray", "Mark 11:24", True),
+    "ep16_2026-08-16_camp-meeting-day1.mp3": ("Camp Meeting Night 1", "Speak to the Mountain: Take Full Responsibility for Your Life", "Mark 11:23", True),
+    "ep15_2026-08-11_evening-live.mp3": ("Tuesday Service", "Speak to Your Mountain: Faith as a Grain of Mustard Seed", "Matthew 17:20", True),
+    "ep14_2026-08-09_sunday-service.mp3": ("Sunday Service", "It Wasn't God That Did This: Loosed From a Spirit of Infirmity", "Luke 13:16", True),
+    "ep13_2026-08-02_sunday-message.mp3": ("Sunday Message", "Attend to His Word: Health to All Your Flesh", "Proverbs 4:20-22", True),
+    "ep12_live0020.mp3": ("Sunday Service", "Take Full Responsibility: Stand on Chapter and Verse", "Isaiah 53:5", True),
+    "ep11_live0003.mp3": ("Message", "If You Have Faith, You Shall Say: Calling Things That Be Not", "Mark 11:23", False),
+    "ep10_live0002.mp3": ("Message", "Your Youth Renewed Like the Eagle's: The Power of Your Words", "Psalm 103:5", False),
+    "ep9_live0001.mp3": ("Message", "By His Stripes You Were Healed: Receiving Divine Healing by Faith", "1 Peter 2:24", False),
+    "ep8_a_prayer_project.mp3": ("Tuesday Service", "A Prayer Project: Pray for Your Leaders, Pray Over Your Food", "1 Timothy 2:1-2", True),
+    "ep7_praying_in_tongues.mp3": ("Tuesday Service", "Praying in Tongues: Power for Your Breakthrough", "Jude 20", True),
+    "ep6_guard_your_mouth.mp3": ("Sunday Service", "Guard Your Mouth: Walking in Love Brings Divine Health", "1 Peter 3:10", True),
+    "ep5_lifestyle_of_worship.mp3": ("Sunday Service", "Develop a Lifestyle of Worship", "Matthew 6:6", True),
+    "ep4_worship_miracle.mp3": ("Sunday Service", "Worship Brings the Miracle: The Canaanite Woman's Faith", "Matthew 15:25", True),
+    "ep2_take_control.mp3": ("Message", "Living the Abundant Life", "John 10:10", False),
+    "ep1_promised_land.mp3": ("Message", "Faith Over the Giants: The 12 Spies", "Numbers 13", False),
+    "ep3_message.mp3": ("Message", "Watch Your Words: The Power of Your Mouth", "", False),
+    "ep02_2025-10-12_sunday-message.mp3": ("Sunday Message", "A Better Covenant, Better Promises", "Hebrews 8:6", True),
+    "ep01_2025-09-07_sunday-message.mp3": ("Sunday Message", "His Word Is Health to Your Flesh", "Proverbs 4:22", True),
+}
 
+# itunes:episode collisions in the legacy list (2 and 3 were each used twice). The earlier-published item of each
+# pair keeps its number; the later one carries none (numbers are optional for an 'episodic' show) — every other
+# number stays as listeners already know it.
+EP_NUMBER_OVERRIDE = {"ep1_promised_land.mp3": None, "ep2_take_control.mp3": None}
 
-# Sep 29 2026: the Pages site hit ~955 MB of its 1 GB cap. New episodes are hosted as
-# assets on the "audio" GitHub Release instead (no site cap; range requests work).
-# Their mp3s live in audio_release/ (gitignored) so the feed can still read size/duration.
-# Episodes added by sermon_watch.py live in episodes_auto.json (newest first).
-AUDIO_REL = BASE / "audio_release"
-REL_URL = "https://github.com/bmob222/jrm-podcast/releases/download/audio"
+# Chapters / transcript for legacy episodes that have a word-timed whisper transcript (same timeline as the MP3).
+LEGACY_EXTRAS = {
+    "ep28_2026-09-22_tuesday-service.mp3": {
+        "chapters": [{"t": 0, "label": "Scriptures on Binding and Loosing"}, {"t": 146, "label": "Jesus Calms the Storm"},
+                     {"t": 331, "label": "Claim Your Inheritance"}, {"t": 540, "label": "Fight With Your Mouth"},
+                     {"t": 772, "label": "Speak to the Mountain"}, {"t": 1169, "label": "Confess Jesus as Lord"},
+                     {"t": 1354, "label": "Prosperity Belongs to You"}, {"t": 1852, "label": "Talk to It, Not About It"},
+                     {"t": 2027, "label": "Salvation Prayer"}],
+        "transcript": "transcripts/ep28_2026-09-22_tuesday-service.vtt",
+        "yt_video": "yp6IHv9YYBw",
+    },
+}
+
 _auto = BASE / "episodes_auto.json"
-if _auto.exists():
-    import json as _json
-    EPISODES = _json.loads(_auto.read_text()) + EPISODES
+AUTO_EPISODES = json.loads(_auto.read_text()) if _auto.exists() else []
 
-items = []
-for e in EPISODES:
-    rel = e.get("host") == "release"
-    fp = (AUDIO_REL if rel else AUDIO) / e["file"]
-    url = f"{REL_URL}/{e['file']}" if rel else f"{PUB}/audio/{e['file']}"
-    size = fp.stat().st_size
+
+# ------------------------------------------------------------------ helpers
+def load_json(path, default):
+    try:
+        return json.loads(Path(path).read_text())
+    except FileNotFoundError:
+        return default
+
+
+def dur_seconds(f):
+    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(f)],
+                         capture_output=True, text=True).stdout.strip()
+    try:
+        return float(out)
+    except ValueError:
+        return 0.0
+
+
+def hhmmss(s):
+    s = int(round(s))
+    return "%02d:%02d:%02d" % (s // 3600, (s % 3600) // 60, s % 60)
+
+
+def ts(t):
+    t = int(t)
+    return "%d:%02d:%02d" % (t // 3600, t % 3600 // 60, t % 60) if t >= 3600 else "%02d:%02d" % (t // 60, t % 60)
+
+
+def eastern(pub):
+    """Parse an RFC-822 pubDate and return an aware datetime in America/New_York.
+    Strings written with a fixed -0400/-0500 are treated as Eastern WALL-CLOCK time (the old builder hard-coded
+    -0400 even after DST ended); anything else is converted properly."""
+    d = email.utils.parsedate_to_datetime(pub)
+    if TZ is None:
+        return d
+    off = d.utcoffset()
+    if off in (timedelta(hours=-4), timedelta(hours=-5)):
+        return d.replace(tzinfo=None).replace(tzinfo=TZ)
+    return d.astimezone(TZ)
+
+
+def rfc822(d):
+    return d.strftime("%a, %d %b %Y %H:%M:%S %z")
+
+
+def chapters_ok(ch):
+    try:
+        ts_ = [float(c["t"]) for c in ch]
+    except Exception:
+        return False
+    return (len(ch) >= 3 and ts_[0] == 0 and all(b - a >= 30 for a, b in zip(ts_, ts_[1:]))
+            and all(str(c.get("label", "")).strip() for c in ch))
+
+
+def clean_label(s):
+    s = re.sub(r"[^\w\s'’:,.!?&()/-]", "", str(s))   # Spotify: plain text, no emojis / HTML
+    return re.sub(r"\s+", " ", s).strip()[:80]
+
+
+def titles_for(e):
+    """(itunes:title, title). Topic-first; the scripture is appended unless the topic already names a verse."""
+    topic = (e.get("topic") or "").strip()
+    if not topic:
+        t = e["title"].strip()
+        return t, (t if HOST_NAME in t else t + " | " + HOST_NAME)
+    scr = (e.get("scripture") or (e.get("scriptures") or [""])[0] or "").strip()
+    if scr and (scr.lower() in topic.lower() or re.search(r"\d+:\d+", topic)):
+        scr = ""
+    it = topic + (" (%s)" % scr if scr else "")
+    return it, it + " | " + HOST_NAME
+
+
+def service_line(e, d):
+    if e.get("type") == "bonus":
+        return ""
+    svc = e.get("service") or ""
+    if not svc or svc == "Message":
+        svc = {6: "Sunday Service", 1: "Tuesday Service"}.get(d.weekday(), "Message")
+    parts = [svc]
+    if e.get("show_date", True):
+        parts.append("%s %d, %d" % (d.strftime("%B"), d.day, d.year))
+    if svc in ("Sunday Service", "Tuesday Service", "Sunday Message"):
+        parts.append("Hartford, CT")
+    return " · ".join(parts)
+
+
+def yt_link(e):
+    return "https://youtu.be/%s" % e["yt_video"] if e.get("yt_video") else ""
+
+
+def build_item(e, n_by_file, manifest, retired):
+    f = e["file"]
+    guid = "jrm-" + f
+    if guid in retired:
+        raise SystemExit("ERROR: %s is a retired GUID (%s) — never reuse it" % (guid, retired[guid].get("reason")))
+    local = AUDIO_REL / f if (AUDIO_REL / f).exists() else AUDIO / f
+    if not local.exists():
+        raise SystemExit("ERROR: audio file for %s not found in audio_release/ or audio/" % f)
+    on_release = e.get("host") == "release" or f in manifest
+    url = "%s/%s" % (REL_URL, f) if on_release else "%s/audio/%s" % (PUB, f)
+    size = local.stat().st_size
+    seconds = float(e.get("duration_s") or 0) or dur_seconds(local)
+    d = eastern(e["pub"])
+    it_title, title = titles_for(e)
     etype = e.get("type", "full")
-    epnum = f"\n      <itunes:episode>{e['ep']}</itunes:episode>" if etype == "full" and e.get("ep") else ""
-    items.append(f"""    <item>
-      <title>{escape(e['title'])}</title>
-      <itunes:title>{escape(e['title'])}</itunes:title>
-      <description>{escape(e['desc'] + CTA)}</description>
-      <itunes:summary>{escape(e['desc'] + CTA)}</itunes:summary>
-      <itunes:author>Pastor Jesse Rich</itunes:author>
-      <enclosure url="{url}" length="{size}" type="audio/mpeg"/>
-      <guid isPermaLink="false">jrm-{e['file']}</guid>
-      <pubDate>{e['pub']}</pubDate>
-      <itunes:duration>{dur_hhmmss(fp)}</itunes:duration>{epnum}
-      <itunes:episodeType>{etype}</itunes:episodeType>
-      <itunes:explicit>false</itunes:explicit>
-    </item>""")
+    epn = n_by_file.get(f)
+    svc = service_line(e, d)
+    desc = e["desc"].strip()
+    chapters = e.get("chapters") or []
+    chapters = chapters if chapters_ok(chapters) else []
+    ch_lines = ["(%s) %s" % (ts(c["t"]), clean_label(c["label"])) for c in chapters]
+    yt = yt_link(e)
+    watch = yt or YT_FULL_SERMONS
+    # plain-text description (Spotify/Apple chapters come from these lines)
+    plain = []
+    if svc:
+        plain += [svc, ""]
+    plain.append(desc)
+    if ch_lines:
+        plain += ["", "Chapters:"] + ch_lines
+    if etype == "full":
+        plain += ["", ("Watch this message on YouTube: %s" % yt) if yt else
+                  ("Full sermons on YouTube: %s" % YT_FULL_SERMONS)]
+    plain += ["Support this ministry: %s" % GIVING_URL, "", CTA]
+    plain_s = "\n".join(plain)
+    # HTML show notes
+    h = []
+    if svc:
+        h.append("<p><strong>%s</strong></p>" % escape(svc))
+    h.append("<p>%s</p>" % escape(desc))
+    scr = e.get("scriptures") or ([e["scripture"]] if e.get("scripture") else [])
+    if scr:
+        h.append("<p>Scriptures: %s</p>" % escape(", ".join(scr[:6])))
+    if ch_lines:
+        h.append("<p>Chapters:</p>")
+        h += ["<p>%s</p>" % escape(x) for x in ch_lines]
+    if etype == "full":
+        h.append('<p>%s <a href=%s>%s</a></p>' % ("Watch this message on YouTube:" if yt else "Full sermons on YouTube:",
+                                                quoteattr(watch), escape(watch)))
+    h.append('<p>Support this ministry: <a href=%s>%s</a></p>' % (quoteattr(GIVING_URL), escape(GIVING_URL)))
+    h.append('<p>Worship with us — Sundays 9:30 AM &amp; Tuesdays 7:00 PM in Hartford, CT. More at '
+             '<a href=%s>JesseRichMinistries.com</a>.</p>' % quoteattr(SITE))
+    html = "".join(h).replace("]]>", "]]&gt;")
+    lines = ["    <item>",
+             "      <title>%s</title>" % escape(title),
+             "      <itunes:title>%s</itunes:title>" % escape(it_title),
+             "      <link>%s</link>" % escape(yt or SITE),
+             "      <description>%s</description>" % escape(plain_s),
+             "      <content:encoded><![CDATA[%s]]></content:encoded>" % html,
+             "      <itunes:summary>%s</itunes:summary>" % escape(plain_s),
+             "      <itunes:author>%s</itunes:author>" % HOST_NAME,
+             '      <enclosure url=%s length="%d" type="audio/mpeg"/>' % (quoteattr(url), size),
+             '      <guid isPermaLink="false">%s</guid>' % escape(guid),
+             "      <pubDate>%s</pubDate>" % rfc822(d),
+             "      <itunes:duration>%s</itunes:duration>" % hhmmss(seconds)]
+    if epn:
+        lines.append("      <itunes:episode>%d</itunes:episode>" % epn)
+    lines += ["      <itunes:episodeType>%s</itunes:episodeType>" % etype,
+              "      <itunes:explicit>false</itunes:explicit>"]
+    tr = e.get("transcript")
+    if tr and (BASE / tr).exists():
+        lines.append('      <podcast:transcript url=%s type="text/vtt" language="en"/>'
+                     % quoteattr("%s/%s" % (PUB, tr)))
+    lines.append("    </item>")
+    return "\n".join(lines), {"guid": guid, "url": url, "size": size, "ep": epn, "title": title,
+                              "chapters": len(ch_lines), "transcript": bool(tr and (BASE / tr).exists())}
 
-feed = f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+def episodes():
+    eps = []
+    for e in AUTO_EPISODES:
+        eps.append(dict(e))
+    for e in EPISODES:
+        e = dict(e)
+        meta = LEGACY_META.get(e["file"])
+        if meta:
+            svc, topic, scr, show_date = meta
+            e.setdefault("service", svc)
+            e.setdefault("topic", topic)
+            e.setdefault("scripture", scr)
+            e.setdefault("show_date", show_date)
+        e.update({k: v for k, v in LEGACY_EXTRAS.get(e["file"], {}).items() if k not in e})
+        if e["file"] in EP_NUMBER_OVERRIDE:
+            e["ep"] = EP_NUMBER_OVERRIDE[e["file"]]
+        eps.append(e)
+    return eps
+
+
+def build():
+    manifest = load_json(MANIFEST, {}).get("files", {})
+    retired = {r["guid"]: r for r in load_json(RETIRED, {"retired": []}).get("retired", [])}
+    eps = episodes()
+    n_by_file, seen = {}, {}
+    for e in eps:
+        if e.get("type", "full") == "full" and e.get("ep"):
+            n = int(e["ep"])
+            if n in seen:
+                raise SystemExit("ERROR: itunes:episode %d used by both %s and %s" % (n, seen[n], e["file"]))
+            seen[n] = e["file"]
+            n_by_file[e["file"]] = n
+    items, info = [], []
+    for e in eps:
+        x, meta = build_item(e, n_by_file, manifest, retired)
+        items.append(x)
+        info.append(meta)
+    guids = [m["guid"] for m in info]
+    if len(guids) != len(set(guids)):
+        raise SystemExit("ERROR: duplicate GUIDs in feed")
+    now = datetime.now(TZ) if TZ else datetime.now().astimezone()
+    feed = """<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:podcast="https://podcastindex.org/namespace/1.0">
   <channel>
     <title>Jesse Rich Ministries</title>
     <link>https://JesseRichMinistries.com</link>
+    <atom:link href="%(feed)s" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
     <copyright>© Jesse Rich Ministries</copyright>
-    <description>{escape(CHANNEL_DESC)}</description>
-    <itunes:summary>{escape(CHANNEL_DESC)}</itunes:summary>
+    <lastBuildDate>%(lbd)s</lastBuildDate>
+    <description>%(desc)s</description>
+    <image>
+      <url>%(cover)s</url>
+      <title>Jesse Rich Ministries</title>
+      <link>https://JesseRichMinistries.com</link>
+    </image>
+    <itunes:summary>%(desc)s</itunes:summary>
     <itunes:author>Pastor Jesse Rich</itunes:author>
     <itunes:type>episodic</itunes:type>
     <itunes:owner>
       <itunes:name>Jesse Rich Ministries</itunes:name>
-      <itunes:email>{OWNER_EMAIL}</itunes:email>
+      <itunes:email>%(email)s</itunes:email>
     </itunes:owner>
-    <itunes:image href="{PUB}/art/jrm_cover_v2_cross.png"/>
+    <itunes:image href="%(cover)s"/>
     <itunes:category text="Religion &amp; Spirituality">
       <itunes:category text="Christianity"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
-{chr(10).join(items)}
+    <podcast:guid>%(pguid)s</podcast:guid>
+    <podcast:locked owner="%(email)s">%(locked)s</podcast:locked>
+    <podcast:funding url="%(giving)s">Support Jesse Rich Ministries</podcast:funding>
+    <podcast:person role="host" href="%(site)s">Pastor Jesse Rich</podcast:person>
+%(items)s
   </channel>
 </rss>
-"""
-(BASE / "feed.xml").write_text(feed)
-print("wrote feed.xml with", len(EPISODES), "episodes")
-print("feed URL:", PUB + "/feed.xml")
+""" % {"feed": FEED_URL, "lbd": rfc822(now), "desc": escape(CHANNEL_DESC), "cover": COVER_URL,
+       "email": OWNER_EMAIL, "pguid": PODCAST_GUID, "locked": LOCKED, "giving": GIVING_URL, "site": SITE,
+       "items": "\n".join(items)}
+    return feed, info
+
+
+def validate(feed, info):
+    root = ET.fromstring(feed.encode("utf-8"))
+    ch = root.find("channel")
+    items = ch.findall("item")
+    assert len(items) == len(info), "item count mismatch"
+    for it in items:
+        email.utils.parsedate_to_datetime(it.findtext("pubDate"))
+        enc = it.find("enclosure")
+        assert int(enc.get("length")) > 0, "empty enclosure"
+    return len(items)
+
+
+def main():
+    check = "--check" in sys.argv
+    feed, info = build()
+    n = validate(feed, info)
+    if not check:
+        fd, tmp = tempfile.mkstemp(prefix=".feed.", suffix=".xml", dir=str(BASE))
+        with os.fdopen(fd, "w") as f:
+            f.write(feed)
+        os.chmod(tmp, 0o644)
+        os.replace(tmp, str(BASE / "feed.xml"))
+    rel = sum(1 for m in info if m["url"].startswith(REL_URL))
+    print("%s feed.xml with %d episodes (%d on the Release, %d on Pages; %d with chapters, %d with transcripts)"
+          % ("checked" if check else "wrote", n, rel, n - rel, sum(1 for m in info if m["chapters"]),
+             sum(1 for m in info if m["transcript"])))
+    print("feed URL:", FEED_URL)
+
+
+if __name__ == "__main__":
+    main()

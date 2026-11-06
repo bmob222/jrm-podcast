@@ -3,3 +3,11 @@ feed/
 *.wav
 build_rss.py
 audio_release/
+
+# Nov 2026: local-only files (never publish backups / temp files on Pages)
+*.bak-nov06
+.release_assets.txt
+.enclosures.txt
+.feed_head.xml
+.feed.*.xml
+__pycache__/

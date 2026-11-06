@@ -1,0 +1,14 @@
+{
+ "retired": [
+  {
+   "guid": "jrm-ep36_2026-11-01_sunday-service.mp3",
+   "file": "ep36_2026-11-01_sunday-service.mp3",
+   "ep": 36,
+   "retired_at": "2026-11-06",
+   "reason": "duplicate of ep35: the church uploaded the Nov 1 2026 service twice (FB 1145422321267281 is a byte-identical copy of 2132213197381903); MP3s identical. Never reuse this GUID or episode number.",
+   "fb_video": "1145422321267281",
+   "duplicate_of_fb_video": "2132213197381903",
+   "release_asset_left_in_place": true
+  }
+ ]
+}

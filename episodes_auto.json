@@ -6,16 +6,64 @@
   "src_video": "2026-11-03_1595397688517816",
   "title": "Tuesday Service 11/3/26: Decree and Declare Your Covenant of Prosperity",
   "pub": "Tue, 03 Nov 2026 12:00:00 -0400",
-  "desc": "Pastor Jesse opens in 3 John 2 and shows from John 10:10, Mark 10:29-30, Psalm 35:27 and 2 Corinthians 8:9 that God's will includes provision and health for His children. He explains how he took 3 John 2 as his own verse and began speaking it daily, with worship and thanksgiving. From Psalm 103 he teaches that angels respond to God's Word spoken in faith. He encourages listeners to feed their faith with scripture, take authority over lack and sickness right away, and keep praising God. The message closes with Romans 10 and a prayer for anyone who wants to receive Jesus as Lord."
- },
- {
-  "file": "ep36_2026-11-01_sunday-service.mp3",
-  "ep": 36,
-  "host": "release",
-  "src_video": "2026-11-01_1145422321267281",
-  "title": "Sunday Service 11/1/26: Feed Your Faith: Scripture-Based Prayer and Healing",
-  "pub": "Sun, 01 Nov 2026 12:00:00 -0400",
-  "desc": "Pastor Jesse teaches that faith grows by continually hearing the Word of God, and that we should never assume we already know it. He explains how to pray with scriptures in hand, so we know God's will before we ask, and how to stand firm when doubt and circumstances push back. Using James 1 and Matthew 18:19, he shows why wavering undermines our prayers and how the Word answers it. He encourages daily time in Scripture, including healing scriptures, and closes with an invitation to receive Jesus as Lord and a prayer for healing. Scriptures: Romans 10:17, John 15:7, Matthew 18:19, James 1:5-8."
+  "desc": "Pastor Jesse opens in 3 John 2 and shows from John 10:10, Mark 10:29-30, Psalm 35:27 and 2 Corinthians 8:9 that God's will includes provision and health for His children. He explains how he took 3 John 2 as his own verse and began speaking it daily, with worship and thanksgiving. From Psalm 103 he teaches that angels respond to God's Word spoken in faith. He encourages listeners to feed their faith with scripture, take authority over lack and sickness right away, and keep praising God. The message closes with Romans 10 and a prayer for anyone who wants to receive Jesus as Lord.",
+  "service": "Tuesday Service",
+  "service_date": "2026-11-03",
+  "topic": "Decree and Declare Your Covenant of Prosperity",
+  "scriptures": [
+   "3 John 2",
+   "Mark 10:29-30",
+   "John 10:10",
+   "Psalm 35:27",
+   "Psalm 103:20",
+   "2 Corinthians 8:9"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "3 John 2: God Wants You Well"
+   },
+   {
+    "t": 75,
+    "label": "Jesus Promises a Hundredfold"
+   },
+   {
+    "t": 175,
+    "label": "Psalm 35: Praise Continually"
+   },
+   {
+    "t": 436,
+    "label": "Angels Hearken to God's Word"
+   },
+   {
+    "t": 546,
+    "label": "Satan Fights Your Faith"
+   },
+   {
+    "t": 938,
+    "label": "Your Mouth Is Your Miracle"
+   },
+   {
+    "t": 1144,
+    "label": "Confessing Jesus as Lord"
+   },
+   {
+    "t": 1452,
+    "label": "God Is Not Withholding"
+   },
+   {
+    "t": 1865,
+    "label": "Take Authority Immediately"
+   },
+   {
+    "t": 2086,
+    "label": "Salvation Prayer"
+   }
+  ],
+  "transcript": "transcripts/ep37_2026-11-03_tuesday-service.vtt",
+  "duration_s": 2201.515,
+  "fb_video": "1595397688517816",
+  "yt_video": null
  },
  {
   "file": "ep35_2026-11-01_sunday-service.mp3",
@@ -24,7 +72,60 @@
   "src_video": "2026-11-01_2132213197381903",
   "title": "Sunday Service 11/1/26: Feed Your Faith: Stay Built Up on God's Word",
   "pub": "Sun, 01 Nov 2026 12:00:00 -0400",
-  "desc": "Pastor Jesse teaches that faith is fed by continually hearing God's word, and that we should never assume we've already heard it. He shows how to back up every prayer for healing or finances with scripture, so you know you are praying God's will. Using John 15, Matthew 18:19, and James 1, he explains how to stand your ground after you pray, thank God instead of asking again, and answer doubt with the word. He encourages a daily habit of reading and studying, with a healing devotional as a practical tool, and closes with an invitation to receive Jesus as Lord and a prayer for those watching. Scriptures: Romans 10:17, John 15:7, Matthew 18:19, James 1:5-8."
+  "desc": "Pastor Jesse teaches that faith is fed by continually hearing God's word, and that we should never assume we've already heard it. He shows how to back up every prayer for healing or finances with scripture, so you know you are praying God's will. Using John 15, Matthew 18:19, and James 1, he explains how to stand your ground after you pray, thank God instead of asking again, and answer doubt with the word. He encourages a daily habit of reading and studying, with a healing devotional as a practical tool, and closes with an invitation to receive Jesus as Lord and a prayer for those watching. Scriptures: Romans 10:17, John 15:7, Matthew 18:19, James 1:5-8.",
+  "service": "Sunday Service",
+  "service_date": "2026-11-01",
+  "topic": "Feed Your Faith: Stay Built Up on God's Word",
+  "scriptures": [
+   "Romans 10:17",
+   "John 15:7",
+   "Matthew 18:19",
+   "James 1:5-8",
+   "Matthew 4:4",
+   "Matthew 7:24"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "Faith Fed by the Word"
+   },
+   {
+    "t": 62,
+    "label": "Abiding in His Word"
+   },
+   {
+    "t": 143,
+    "label": "Point of Contact for Healing"
+   },
+   {
+    "t": 246,
+    "label": "Standing on Your Prayer of Agreement"
+   },
+   {
+    "t": 461,
+    "label": "James 1: Ask Without Wavering"
+   },
+   {
+    "t": 786,
+    "label": "Living Off Every Word"
+   },
+   {
+    "t": 968,
+    "label": "Being a Doer of the Word"
+   },
+   {
+    "t": 1213,
+    "label": "Daily Healing Devotional Habit"
+   },
+   {
+    "t": 1469,
+    "label": "Salvation Prayer and Closing"
+   }
+  ],
+  "transcript": "transcripts/ep35_2026-11-01_sunday-service.vtt",
+  "duration_s": 1632.791,
+  "fb_video": "2132213197381903",
+  "yt_video": null
  },
  {
   "file": "ep34_2026-10-20_tuesday-service.mp3",
@@ -33,7 +134,22 @@
   "src_video": "2026-10-20_1615797026410128",
   "title": "Tuesday Service 10/20/26: Stay Thankful: Remember What God Has Done",
   "pub": "Tue, 20 Oct 2026 12:00:00 -0400",
-  "desc": "Pastor Jesse continues the Gospel of John series in chapter 6 and shows what Jesus did when He faced a need: He gave thanks before the miracle came. He pairs it with Matthew 16, where the disciples forgot what God had just done and fell into worry. Pastor Jesse encourages believers to stop and remember what God has done for them, from healing to deliverance, and to turn their worries into thanksgiving. He shares stories of pastors who stayed grateful and generous and saw God take care of them. The message closes with a clear invitation to receive Jesus as Lord and Savior. Scriptures: John 6:5-13, Matthew 16:7-10, Romans 10:9-10, 1 Thessalonians 5:18."
+  "desc": "Pastor Jesse continues the Gospel of John series in chapter 6 and shows what Jesus did when He faced a need: He gave thanks before the miracle came. He pairs it with Matthew 16, where the disciples forgot what God had just done and fell into worry. Pastor Jesse encourages believers to stop and remember what God has done for them, from healing to deliverance, and to turn their worries into thanksgiving. He shares stories of pastors who stayed grateful and generous and saw God take care of them. The message closes with a clear invitation to receive Jesus as Lord and Savior. Scriptures: John 6:5-13, Matthew 16:7-10, Romans 10:9-10, 1 Thessalonians 5:18.",
+  "service": "Tuesday Service",
+  "service_date": "2026-10-20",
+  "topic": "Stay Thankful: Remember What God Has Done",
+  "scriptures": [
+   "John 6:5-13",
+   "Matthew 16:7-10",
+   "Romans 10:9-10",
+   "1 Thessalonians 5:18",
+   "Philippians 4:6"
+  ],
+  "chapters": [],
+  "transcript": "transcripts/ep34_2026-10-20_tuesday-service.vtt",
+  "duration_s": 1384.277,
+  "fb_video": "1615797026410128",
+  "yt_video": null
  },
  {
   "file": "ep33_2026-10-13_tuesday-service.mp3",
@@ -42,7 +158,56 @@
   "src_video": "2026-10-13_1430731502536541",
   "title": "Tuesday Service 10/13/26: Use Your Authority: Speak to Your Mountain",
   "pub": "Tue, 13 Oct 2026 12:00:00 -0400",
-  "desc": "Pastor Jesse opens in Matthew 18:18 and Philippians 2 to show that believers have been given the name of Jesus and real authority over the devil. He teaches that we are to speak to our problems, not just talk to God about them, and to keep standing on our confession of faith as Jesus did in Matthew 17:20. He shows from James 2 that faith has to be put to work, and he points to Caleb as an example of speaking boldly about the mountain instead of complaining about it. He then warns about the cost of judging others and talking against ministers, and shares a personal story of choosing to give and pray instead. The message closes with an invitation to receive Jesus as Lord and a prayer of salvation."
+  "desc": "Pastor Jesse opens in Matthew 18:18 and Philippians 2 to show that believers have been given the name of Jesus and real authority over the devil. He teaches that we are to speak to our problems, not just talk to God about them, and to keep standing on our confession of faith as Jesus did in Matthew 17:20. He shows from James 2 that faith has to be put to work, and he points to Caleb as an example of speaking boldly about the mountain instead of complaining about it. He then warns about the cost of judging others and talking against ministers, and shares a personal story of choosing to give and pray instead. The message closes with an invitation to receive Jesus as Lord and a prayer of salvation.",
+  "service": "Tuesday Service",
+  "service_date": "2026-10-13",
+  "topic": "Use Your Authority: Speak to Your Mountain",
+  "scriptures": [
+   "Matthew 18:18",
+   "Philippians 2:9-11",
+   "Matthew 17:20",
+   "James 2:17",
+   "Romans 14:4",
+   "Galatians 6:1"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "Authority in Jesus' Name"
+   },
+   {
+    "t": 346,
+    "label": "Speak to the Mountain"
+   },
+   {
+    "t": 586,
+    "label": "Faith Without Works"
+   },
+   {
+    "t": 687,
+    "label": "Caleb Wanted the Mountain"
+   },
+   {
+    "t": 800,
+    "label": "Guard Your Mouth"
+   },
+   {
+    "t": 1550,
+    "label": "Do Not Judge, Restore"
+   },
+   {
+    "t": 1805,
+    "label": "Giving to a Fallen Pastor"
+   },
+   {
+    "t": 2200,
+    "label": "Salvation Prayer"
+   }
+  ],
+  "transcript": "transcripts/ep33_2026-10-13_tuesday-service.vtt",
+  "duration_s": 2385.323,
+  "fb_video": "1430731502536541",
+  "yt_video": null
  },
  {
   "file": "ep32_2026-10-11_sunday-service.mp3",
@@ -51,7 +216,59 @@
   "src_video": "2026-10-11_1071690655739123",
   "title": "Sunday Service 10/11/26: Follow the Spirit Within and Obey God Now",
   "pub": "Sun, 11 Oct 2026 12:00:00 -0400",
-  "desc": "Pastor Rich opens with Jesus in Gethsemane and Romans 8:14, then moves to the parable of the rich fool in Luke 12. He shows how the man planned only for his own comfort and never sought God. Pastor Rich teaches that believers are meant to be led by the Spirit and to obey the inward witness right away, whether that means giving, serving, or following a call. He shares stories from his own life, including his early years in church and a newspaper route he almost quit, to show why we should stay hungry for God. The message closes with an invitation to receive Jesus as Lord and Savior. Scriptures: Luke 12:16-21, Luke 4:1, Ecclesiastes 11:1-4, Romans 8:14."
+  "desc": "Pastor Rich opens with Jesus in Gethsemane and Romans 8:14, then moves to the parable of the rich fool in Luke 12. He shows how the man planned only for his own comfort and never sought God. Pastor Rich teaches that believers are meant to be led by the Spirit and to obey the inward witness right away, whether that means giving, serving, or following a call. He shares stories from his own life, including his early years in church and a newspaper route he almost quit, to show why we should stay hungry for God. The message closes with an invitation to receive Jesus as Lord and Savior. Scriptures: Luke 12:16-21, Luke 4:1, Ecclesiastes 11:1-4, Romans 8:14.",
+  "service": "Sunday Service",
+  "service_date": "2026-10-11",
+  "topic": "Follow the Spirit Within and Obey God Now",
+  "scriptures": [
+   "Luke 12:16-21",
+   "Luke 4:1",
+   "Ecclesiastes 11:1-4",
+   "Romans 8:14",
+   "James 1:22"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "Gethsemane and Romans 8"
+   },
+   {
+    "t": 145,
+    "label": "Parable of the Rich Fool"
+   },
+   {
+    "t": 225,
+    "label": "Led by the Spirit"
+   },
+   {
+    "t": 449,
+    "label": "Don't Lose Your Hunger"
+   },
+   {
+    "t": 521,
+    "label": "Ecclesiastes 11: Sow Now"
+   },
+   {
+    "t": 731,
+    "label": "Retirement Mindset vs. Spirit"
+   },
+   {
+    "t": 1365,
+    "label": "Jesus Sought the Father"
+   },
+   {
+    "t": 1521,
+    "label": "The Call of God"
+   },
+   {
+    "t": 1950,
+    "label": "Salvation Prayer"
+   }
+  ],
+  "transcript": "transcripts/ep32_2026-10-11_sunday-service.vtt",
+  "duration_s": 2090.112,
+  "fb_video": "1071690655739123",
+  "yt_video": null
  },
  {
   "file": "ep31_2026-10-06_tuesday-service.mp3",
@@ -60,7 +277,60 @@
   "src_video": "2026-10-06_1777406793535979",
   "title": "Tuesday Service 10/6/26: Take Authority Over Satan: Hold Fast Your Confession",
   "pub": "Tue, 06 Oct 2026 12:00:00 -0400",
-  "desc": "Pastor Jesse walks through the key scriptures on binding and loosing, including Matthew 12, 16 and 18, Mark 16, Luke 10 and Philippians 2, to show how believers can exercise the authority Jesus gave them. He shares how he used those verses on his job and finances during a hard season, and how he speaks to pain in Jesus' name until it leaves. From 1 Timothy 4, he explains why it matters to hold fast your confession of faith and not be talked out of it by seducing spirits. He also encourages speaking strength over your body, staying thankful with a spirit of victory, and making your mouth work for you in praise. The service closes with a prayer to receive Jesus as Lord. Scriptures: Matthew 18:18, Mark 16:17-18, Luke 13:16, 1 Timothy 4:1."
+  "desc": "Pastor Jesse walks through the key scriptures on binding and loosing, including Matthew 12, 16 and 18, Mark 16, Luke 10 and Philippians 2, to show how believers can exercise the authority Jesus gave them. He shares how he used those verses on his job and finances during a hard season, and how he speaks to pain in Jesus' name until it leaves. From 1 Timothy 4, he explains why it matters to hold fast your confession of faith and not be talked out of it by seducing spirits. He also encourages speaking strength over your body, staying thankful with a spirit of victory, and making your mouth work for you in praise. The service closes with a prayer to receive Jesus as Lord. Scriptures: Matthew 18:18, Mark 16:17-18, Luke 13:16, 1 Timothy 4:1.",
+  "service": "Tuesday Service",
+  "service_date": "2026-10-06",
+  "topic": "Take Authority Over Satan: Hold Fast Your Confession",
+  "scriptures": [
+   "Matthew 18:18",
+   "Mark 16:17-18",
+   "Luke 13:16",
+   "1 Timothy 4:1",
+   "Acts 10:38",
+   "Philippians 2:9-10"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "Scriptures on Our Authority"
+   },
+   {
+    "t": 256,
+    "label": "The Woman Bound 18 Years"
+   },
+   {
+    "t": 423,
+    "label": "Using Authority Over Pain"
+   },
+   {
+    "t": 573,
+    "label": "Hold Fast Your Confession"
+   },
+   {
+    "t": 1446,
+    "label": "Oppression Comes From Satan"
+   },
+   {
+    "t": 1684,
+    "label": "Speak Strength, Not Weakness"
+   },
+   {
+    "t": 2242,
+    "label": "A Spirit of Victory"
+   },
+   {
+    "t": 2720,
+    "label": "Daily Decision to Follow"
+   },
+   {
+    "t": 2957,
+    "label": "Prayer to Receive Jesus"
+   }
+  ],
+  "transcript": "transcripts/ep31_2026-10-06_tuesday-service.vtt",
+  "duration_s": 3130.88,
+  "fb_video": "1777406793535979",
+  "yt_video": null
  },
  {
   "file": "ep30_2026-10-04_sunday-service.mp3",
@@ -69,6 +339,59 @@
   "src_video": "2026-10-04_2352480988624853",
   "title": "Sunday Service 10/4/26: Speak to Your Mountain: Mark 11:23 Faith",
   "pub": "Sun, 04 Oct 2026 12:00:00 -0400",
-  "desc": "Pastor Jesse teaches from Mark 11:23 that Jesus told us to speak to our mountains, not only pray about them. He connects James 3 and the power of the tongue, showing why we should watch our words and also command sickness, fear and lack to go in Jesus' name. He shares his own testimony of attending church without ever confessing Jesus as Lord, then walks through Romans 10:9-10 on salvation by confession. He encourages believers to give and receive in faith, to keep thanking God, and to hold onto childlike faith. The message closes with an invitation to receive Jesus as Lord and a prayer."
+  "desc": "Pastor Jesse teaches from Mark 11:23 that Jesus told us to speak to our mountains, not only pray about them. He connects James 3 and the power of the tongue, showing why we should watch our words and also command sickness, fear and lack to go in Jesus' name. He shares his own testimony of attending church without ever confessing Jesus as Lord, then walks through Romans 10:9-10 on salvation by confession. He encourages believers to give and receive in faith, to keep thanking God, and to hold onto childlike faith. The message closes with an invitation to receive Jesus as Lord and a prayer.",
+  "service": "Sunday Service",
+  "service_date": "2026-10-04",
+  "topic": "Speak to Your Mountain: Mark 11:23 Faith",
+  "scriptures": [
+   "Mark 11:23",
+   "Mark 11:24",
+   "Mark 10:29",
+   "James 3:1-6",
+   "Romans 10:9-10",
+   "Matthew 21:21"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "The Power of the Tongue"
+   },
+   {
+    "t": 74,
+    "label": "Mark 11:23 Introduced"
+   },
+   {
+    "t": 142,
+    "label": "Confessing Jesus as Lord"
+   },
+   {
+    "t": 250,
+    "label": "Praying in Tongues"
+   },
+   {
+    "t": 382,
+    "label": "Speak to Your Mountain"
+   },
+   {
+    "t": 788,
+    "label": "Sowing, Receiving, Desiring"
+   },
+   {
+    "t": 1700,
+    "label": "Train Yourself to Speak"
+   },
+   {
+    "t": 1945,
+    "label": "Childlike Faith"
+   },
+   {
+    "t": 2068,
+    "label": "Prayer to Receive Jesus"
+   }
+  ],
+  "transcript": "transcripts/ep30_2026-10-04_sunday-service.vtt",
+  "duration_s": 2245.248,
+  "fb_video": "2352480988624853",
+  "yt_video": null
  }
 ]
