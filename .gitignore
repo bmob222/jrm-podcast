@@ -11,3 +11,4 @@ audio_release/
 .feed_head.xml
 .feed.*.xml
 __pycache__/
+audio/*.mp3
