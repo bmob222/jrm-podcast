@@ -1,5 +1,66 @@
 [
  {
+  "file": "ep38_2026-11-08_sunday-service.mp3",
+  "ep": 38,
+  "host": "release",
+  "src_video": "2026-11-08_1882645569770542",
+  "title": "Feed Your Faith With Healing Scriptures (Matthew 4:4) | Pastor Jesse Rich",
+  "pub": "Sun, 08 Nov 2026 09:45:42 -0500",
+  "desc": "Pastor Jesse teaches from Matthew 4:4 that believers must feed their faith on God's Word every day, especially when believing God for healing. He walks through Proverbs 4:20-22 and compares Scripture to the label on a prescription, with instructions to follow. He explains from Matthew 7 that the person who hears and acts on the Word stands through the storm. He also shares why healing comes by faith, like salvation, and tells of a time he lay paralyzed in a hospital. The message closes with a prayer for healing and an invitation to receive Jesus as Lord.",
+  "service": "Sunday Service",
+  "service_date": "2026-11-08",
+  "topic": "Feed Your Faith With Healing Scriptures",
+  "scriptures": [
+   "Matthew 4:4",
+   "Proverbs 4:20-22",
+   "Matthew 7:24-27",
+   "Romans 10:17",
+   "Romans 10:9-10"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "Feed Your Faith Daily"
+   },
+   {
+    "t": 242,
+    "label": "Proverbs 4: Attend to My Words"
+   },
+   {
+    "t": 437,
+    "label": "God's Word Is Like a Prescription"
+   },
+   {
+    "t": 854,
+    "label": "Hearing and Doing: Matthew 7"
+   },
+   {
+    "t": 1117,
+    "label": "Caleb Strong at 85"
+   },
+   {
+    "t": 1342,
+    "label": "Knowing the Scripture You Need"
+   },
+   {
+    "t": 1603,
+    "label": "Healing Comes by Faith"
+   },
+   {
+    "t": 1860,
+    "label": "Authority Over Paralysis"
+   },
+   {
+    "t": 2003,
+    "label": "Receive Jesus as Lord"
+   }
+  ],
+  "transcript": "transcripts/ep38_2026-11-08_sunday-service.vtt",
+  "duration_s": 2238.1,
+  "fb_video": "1882645569770542",
+  "yt_video": null
+ },
+ {
   "file": "ep37_2026-11-03_tuesday-service.mp3",
   "ep": 37,
   "host": "release",
