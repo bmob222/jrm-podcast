@@ -6,7 +6,7 @@
     <atom:link href="https://bmob222.github.io/jrm-podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
     <copyright>© Jesse Rich Ministries</copyright>
-    <lastBuildDate>Mon, 09 Nov 2026 22:13:42 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 22:22:36 -0500</lastBuildDate>
     <description>No-compromise, faith-building teaching from Pastor Jesse Rich to help you live the victorious, abundant life Jesus promised. Each episode takes you straight to the Word of God on faith, divine healing, biblical prosperity, and total victory over fear, doubt, and discouragement. Whether you're facing a mountain or believing for a breakthrough, Pastor Jesse will stir your faith to take God at His Word — and expect Him to move.
 
 Worship with us in person: Sundays 9:30 AM &amp; Tuesdays 7:00 PM at the Residence Inn, 942 Main Street, Downtown Hartford, CT. For more messages and to partner with this ministry, visit JesseRichMinistries.com. Jesse Rich Ministries is a 501(c)(3) nonprofit.</description>
@@ -33,6 +33,37 @@ Worship with us in person: Sundays 9:30 AM &amp; Tuesdays 7:00 PM at the Residen
     <podcast:locked owner="customerservice@enemiesbynature.com">yes</podcast:locked>
     <podcast:funding url="https://jesserichministries.com/donation.htm">Support Jesse Rich Ministries</podcast:funding>
     <podcast:person role="host" href="https://jesserichministries.com">Pastor Jesse Rich</podcast:person>
+    <item>
+      <title>Feed Your Faith Daily on Healing Scriptures (Romans 10:17) | Pastor Jesse Rich</title>
+      <itunes:title>Feed Your Faith Daily on Healing Scriptures (Romans 10:17)</itunes:title>
+      <link>https://jesserichministries.com</link>
+      <description>Tuesday Service · November 10, 2026 · Hartford, CT
+
+Pastor Jesse teaches why every believer needs to feed on God's Word daily, especially healing scriptures, starting from Romans 10:17 and Proverbs 4:20-22, which he compares to the directions on a prescription. He walks through Luke 13 and 1 Peter 5 to show that believers have an enemy and need to resist with the Word spoken aloud. He shares the story of reading his healing confessions on a porch swing and answering a friend with 'do not let the word depart from your eyes.' He also recalls losing his health at 18 and urges listeners to hold on to 1 Peter 2:24 and keep their mouths speaking God's Word. The service closes with a prayer to receive Jesus as Lord.
+
+Full sermons on YouTube: https://www.youtube.com/playlist?list=PLOaiQv0ktN3A
+Support this ministry: https://jesserichministries.com/donation.htm
+
+Worship with us — Sundays 9:30 AM &amp; Tuesdays 7:00 PM in Hartford, CT. More at JesseRichMinistries.com.</description>
+      <content:encoded><![CDATA[<p><strong>Tuesday Service · November 10, 2026 · Hartford, CT</strong></p><p>Pastor Jesse teaches why every believer needs to feed on God's Word daily, especially healing scriptures, starting from Romans 10:17 and Proverbs 4:20-22, which he compares to the directions on a prescription. He walks through Luke 13 and 1 Peter 5 to show that believers have an enemy and need to resist with the Word spoken aloud. He shares the story of reading his healing confessions on a porch swing and answering a friend with 'do not let the word depart from your eyes.' He also recalls losing his health at 18 and urges listeners to hold on to 1 Peter 2:24 and keep their mouths speaking God's Word. The service closes with a prayer to receive Jesus as Lord.</p><p>Scriptures: Romans 10:17, Proverbs 4:20-22, 1 Peter 5:8-9, Luke 13:16, Mark 11:23, 1 Peter 2:24</p><p>Full sermons on YouTube: <a href="https://www.youtube.com/playlist?list=PLOaiQv0ktN3A">https://www.youtube.com/playlist?list=PLOaiQv0ktN3A</a></p><p>Support this ministry: <a href="https://jesserichministries.com/donation.htm">https://jesserichministries.com/donation.htm</a></p><p>Worship with us — Sundays 9:30 AM &amp; Tuesdays 7:00 PM in Hartford, CT. More at <a href="https://jesserichministries.com">JesseRichMinistries.com</a>.</p>]]></content:encoded>
+      <itunes:summary>Tuesday Service · November 10, 2026 · Hartford, CT
+
+Pastor Jesse teaches why every believer needs to feed on God's Word daily, especially healing scriptures, starting from Romans 10:17 and Proverbs 4:20-22, which he compares to the directions on a prescription. He walks through Luke 13 and 1 Peter 5 to show that believers have an enemy and need to resist with the Word spoken aloud. He shares the story of reading his healing confessions on a porch swing and answering a friend with 'do not let the word depart from your eyes.' He also recalls losing his health at 18 and urges listeners to hold on to 1 Peter 2:24 and keep their mouths speaking God's Word. The service closes with a prayer to receive Jesus as Lord.
+
+Full sermons on YouTube: https://www.youtube.com/playlist?list=PLOaiQv0ktN3A
+Support this ministry: https://jesserichministries.com/donation.htm
+
+Worship with us — Sundays 9:30 AM &amp; Tuesdays 7:00 PM in Hartford, CT. More at JesseRichMinistries.com.</itunes:summary>
+      <itunes:author>Pastor Jesse Rich</itunes:author>
+      <enclosure url="https://github.com/bmob222/jrm-podcast/releases/download/audio/ep39_2026-11-10_tuesday-service.mp3" length="24162898" type="audio/mpeg"/>
+      <guid isPermaLink="false">jrm-ep39_2026-11-10_tuesday-service.mp3</guid>
+      <pubDate>Tue, 10 Nov 2026 19:07:29 -0500</pubDate>
+      <itunes:duration>00:33:19</itunes:duration>
+      <itunes:episode>39</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+      <podcast:transcript url="https://bmob222.github.io/jrm-podcast/transcripts/ep39_2026-11-10_tuesday-service.vtt" type="text/vtt" language="en"/>
+    </item>
     <item>
       <title>Feed Your Faith With Healing Scriptures (Matthew 4:4) | Pastor Jesse Rich</title>
       <itunes:title>Feed Your Faith With Healing Scriptures (Matthew 4:4)</itunes:title>
