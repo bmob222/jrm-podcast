@@ -1,5 +1,59 @@
 [
  {
+  "file": "ep40_2026-11-17_tuesday-service.mp3",
+  "ep": 40,
+  "host": "release",
+  "src_video": "2026-11-17_3284113805122272",
+  "title": "Claim Your Hundredfold Return in Jesus (Mark 10:29-30) | Pastor Jesse Rich",
+  "pub": "Tue, 17 Nov 2026 19:08:04 -0500",
+  "desc": "Pastor Jesse opens in Mark 10 and shows that Jesus promised a hundredfold return to those who give up something for Him and the Gospel. He walks through Malachi 3, 2 Corinthians 9 and Luke 6:38, and teaches believers to thank God daily and speak the Word over their lives. He shares how he used Psalm 30:6 and 3 John 2 to rebuke doubt when he was struggling. He encourages listeners to keep reading scripture in any area where their faith feels weak, so their spirit is built up. The service closes with a prayer to receive Jesus as Lord and information about the upcoming New England Thanksgiving Bible meetings.",
+  "service": "Tuesday Service",
+  "service_date": "2026-11-17",
+  "topic": "Claim Your Hundredfold Return in Jesus",
+  "scriptures": [
+   "Mark 10:29-30",
+   "Malachi 3:10-11",
+   "2 Corinthians 9:6-11",
+   "Luke 6:38",
+   "Psalm 30:6",
+   "3 John 2"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "Mark 10 Hundredfold Promise"
+   },
+   {
+    "t": 60,
+    "label": "Malachi 3 and Hebrews"
+   },
+   {
+    "t": 181,
+    "label": "2 Corinthians 9 Self-Sufficient"
+   },
+   {
+    "t": 445,
+    "label": "Psalm 30 Rebuke Doubt"
+   },
+   {
+    "t": 781,
+    "label": "Renew Your Mind With Scripture"
+   },
+   {
+    "t": 956,
+    "label": "3 John 2 Testimony"
+   },
+   {
+    "t": 1587,
+    "label": "Prayer for Salvation"
+   }
+  ],
+  "transcript": "transcripts/ep40_2026-11-17_tuesday-service.vtt",
+  "duration_s": 1789.294,
+  "fb_video": "3284113805122272",
+  "yt_video": null
+ },
+ {
   "file": "ep39_2026-11-10_tuesday-service.mp3",
   "ep": 39,
   "host": "release",
