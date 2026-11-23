@@ -1,5 +1,67 @@
 [
  {
+  "file": "ep41_2026-11-22_sunday-service.mp3",
+  "ep": 41,
+  "host": "release",
+  "src_video": "2026-11-22_1110058892069267",
+  "title": "Attend to God's Word and Speak It (Proverbs 4:20-22) | Pastor Jesse Rich",
+  "pub": "Sun, 22 Nov 2026 19:01:54 -0500",
+  "desc": "Pastor Jesse teaches from Proverbs that God's words are life and health to all our flesh, and he shows how to put the Word first when anything comes up in your life. He shares how he was sick and in the hospital as a young man, and how learning that death and life are in the power of the tongue changed how he speaks. He walks through Jesus' words in Matthew and Mark about speaking to the mountain, and he encourages believers to hold fast to their confession of faith when pressure comes. He also talks about being built up through reading the Word and praying in the Holy Spirit. The service closes with an invitation to receive Jesus as Lord.",
+  "service": "Sunday Service",
+  "service_date": "2026-11-22",
+  "topic": "Attend to God's Word and Speak It",
+  "scriptures": [
+   "Proverbs 4:20-22",
+   "Ephesians 4:11-14",
+   "Mark 11:23",
+   "Matthew 17:20",
+   "1 Timothy 4:1",
+   "Romans 10:9"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "God's Word Is Medicine"
+   },
+   {
+    "t": 150,
+    "label": "Five-Fold Ministry Gifts"
+   },
+   {
+    "t": 560,
+    "label": "Tithing Testimony"
+   },
+   {
+    "t": 873,
+    "label": "Words and the Mountain"
+   },
+   {
+    "t": 1019,
+    "label": "Hospital Testimony"
+   },
+   {
+    "t": 1527,
+    "label": "Baptized in the Holy Spirit"
+   },
+   {
+    "t": 1636,
+    "label": "Don't Depart From the Faith"
+   },
+   {
+    "t": 2244,
+    "label": "Get Built Up in Faith"
+   },
+   {
+    "t": 2548,
+    "label": "Receive Jesus as Lord"
+   }
+  ],
+  "transcript": "transcripts/ep41_2026-11-22_sunday-service.vtt",
+  "duration_s": 2698.733,
+  "fb_video": "1110058892069267",
+  "yt_video": null
+ },
+ {
   "file": "ep40_2026-11-17_tuesday-service.mp3",
   "ep": 40,
   "host": "release",
