@@ -1,5 +1,61 @@
 [
  {
+  "file": "ep42_2026-11-23_monday-service.mp3",
+  "ep": 42,
+  "host": "release",
+  "src_video": "2026-11-23_2320671265398973",
+  "title": "Praying in Tongues: Build Up Your Spirit Man (Acts 2:4) | Pastor Jesse Rich",
+  "pub": "Mon, 23 Nov 2026 18:59:10 -0500",
+  "desc": "Pastor Jesse walks through Acts, Romans 8, Jude and 1 Corinthians 14 to show why the baptism of the Holy Spirit and praying in tongues matter for every believer. He explains that tongues edifies and builds up your most holy faith. He also teaches that tongues helps you pray the will of God when you don't know how to pray. He shares how he prayed in tongues through a hotel problem, a search for an apartment in New York City, and a lost passport and visa. The message ends with an invitation to receive Jesus as Lord and be filled with the Holy Spirit.",
+  "service": "Monday Service",
+  "service_date": "2026-11-23",
+  "topic": "Praying in Tongues: Build Up Your Spirit Man",
+  "scriptures": [
+   "Acts 2:4",
+   "Romans 8:26-28",
+   "Jude 20",
+   "1 Corinthians 14:2"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "Acts: Power of the Spirit"
+   },
+   {
+    "t": 127,
+    "label": "Romans 8 Benefits of Tongues"
+   },
+   {
+    "t": 251,
+    "label": "Hotel Problem Testimony"
+   },
+   {
+    "t": 651,
+    "label": "Jude 20: Build Yourself Up"
+   },
+   {
+    "t": 1138,
+    "label": "First Corinthians 14 Teaching"
+   },
+   {
+    "t": 1419,
+    "label": "Finding My New York Apartment"
+   },
+   {
+    "t": 1750,
+    "label": "Passport and Visa Testimony"
+   },
+   {
+    "t": 1997,
+    "label": "Salvation Prayer"
+   }
+  ],
+  "transcript": "transcripts/ep42_2026-11-23_monday-service.vtt",
+  "duration_s": 2142.963,
+  "fb_video": "2320671265398973",
+  "yt_video": null
+ },
+ {
   "file": "ep41_2026-11-22_sunday-service.mp3",
   "ep": 41,
   "host": "release",
