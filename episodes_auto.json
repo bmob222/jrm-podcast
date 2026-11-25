@@ -1,5 +1,65 @@
 [
  {
+  "file": "ep44_2026-11-25_wednesday-service.mp3",
+  "ep": 44,
+  "host": "release",
+  "src_video": "2026-11-25_1546768737577438",
+  "title": "Feed on the Word and Speak to Your Mountain (3 John 2) | Pastor Jesse Rich",
+  "pub": "Wed, 25 Nov 2026 10:27:50 -0500",
+  "desc": "Pastor Jesse opens in 3 John 2 and shows that God's desire for His children is that they prosper and be in health. He explains that believers claim this inheritance by finding out what the new covenant says and decreeing it with their mouths. He shares how he keeps his spirit strong by reading the New Testament for an hour at a time, and why a weak result often means the Word level is too low. He teaches from Mark 11:23 that Jesus said to speak to the mountain, not just talk about it or depend on other people's prayers. He closes by leading listeners in a prayer to receive Jesus as Lord from Romans 10.",
+  "service": "Wednesday Service",
+  "service_date": "2026-11-25",
+  "topic": "Feed on the Word and Speak to Your Mountain",
+  "scriptures": [
+   "3 John 2",
+   "Mark 11:23",
+   "Matthew 4:4",
+   "Romans 10:9"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "3 John 2 opening"
+   },
+   {
+    "t": 166,
+    "label": "Claim your inheritance"
+   },
+   {
+    "t": 324,
+    "label": "Feeding on God's Word"
+   },
+   {
+    "t": 557,
+    "label": "Jesus answered, it is written"
+   },
+   {
+    "t": 848,
+    "label": "Using your authority"
+   },
+   {
+    "t": 2113,
+    "label": "Resist the first flicker"
+   },
+   {
+    "t": 2252,
+    "label": "Mark 11:23, two ifs"
+   },
+   {
+    "t": 3229,
+    "label": "Take your Bible along"
+   },
+   {
+    "t": 3355,
+    "label": "Prayer to receive Jesus"
+   }
+  ],
+  "transcript": "transcripts/ep44_2026-11-25_wednesday-service.vtt",
+  "duration_s": 3493.613,
+  "fb_video": "1546768737577438",
+  "yt_video": null
+ },
+ {
   "file": "ep43_2026-11-24_tuesday-service.mp3",
   "ep": 43,
   "host": "release",
