@@ -1,5 +1,63 @@
 [
  {
+  "file": "ep43_2026-11-24_tuesday-service.mp3",
+  "ep": 43,
+  "host": "release",
+  "src_video": "2026-11-24_1926267355010935",
+  "title": "Prosper and Be in Health: Speak to It (3 John 2) | Pastor Jesse Rich",
+  "pub": "Tue, 24 Nov 2026 18:56:10 -0500",
+  "desc": "Pastor Jesse Rich opens in 3 John 2 and shows that God wishes you to prosper and be in health. He explains that believers don't have to \"suffer for Jesus\", because Jesus already suffered for them. He urges listeners to fill their hearts with the Word by reading the New Testament every day and hearing it out loud. He walks through Mark 11:23 and asks whether you have actually spoken to the mountain in Jesus' name. He closes with a message on keeping a clear conscience before God, and an invitation to receive Jesus as Lord.",
+  "service": "Tuesday Service",
+  "service_date": "2026-11-24",
+  "topic": "Prosper and Be in Health: Speak to It",
+  "scriptures": [
+   "3 John 2",
+   "1 Peter 2:24",
+   "Mark 10:29-30",
+   "Mark 11:23",
+   "1 John 3:20-22",
+   "Romans 10:9"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "3 John 2: Prosper and Health"
+   },
+   {
+    "t": 150,
+    "label": "Church Is Boot Camp"
+   },
+   {
+    "t": 640,
+    "label": "Hundredfold Return, Mark 10"
+   },
+   {
+    "t": 1100,
+    "label": "Getting the Word In You"
+   },
+   {
+    "t": 1415,
+    "label": "Mark 11:23: Speak to It"
+   },
+   {
+    "t": 2050,
+    "label": "Use Your Authority"
+   },
+   {
+    "t": 2850,
+    "label": "A Clear Conscience Before God"
+   },
+   {
+    "t": 3585,
+    "label": "Receive Jesus as Lord"
+   }
+  ],
+  "transcript": "transcripts/ep43_2026-11-24_tuesday-service.vtt",
+  "duration_s": 3762.047,
+  "fb_video": "1926267355010935",
+  "yt_video": null
+ },
+ {
   "file": "ep42_2026-11-23_monday-service.mp3",
   "ep": 42,
   "host": "release",
