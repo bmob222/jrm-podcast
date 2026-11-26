@@ -1,5 +1,66 @@
 [
  {
+  "file": "ep46_2026-11-26_thursday-service.mp3",
+  "ep": 46,
+  "host": "release",
+  "src_video": "2026-11-26_1159658489885660",
+  "title": "Mark 11:24: Believe, Receive, Claim Your Inheritance | Pastor Jesse Rich",
+  "pub": "Thu, 26 Nov 2026 10:33:29 -0500",
+  "desc": "Pastor Jesse teaches from Mark 11:23-24 and Matthew 21:22. He explains that Jesus said \"all things\" you ask in prayer, believing, you will receive, and that this promise has no disclaimer. He shares what happened when he first told people about these verses after he was born again. He reminds believers that God loves them and is not angry with them, and that everything the Father has belongs to them as heirs. He points to Bartimaeus, who kept crying out until Jesus answered him, and encourages listeners to stay bold with God's Word. The service closes with a prayer to receive Jesus as Lord and a prayer for everyone watching.",
+  "service": "Thursday Service",
+  "service_date": "2026-11-26",
+  "topic": "Mark 11:24: Believe, Receive, Claim Your Inheritance",
+  "scriptures": [
+   "Mark 11:24",
+   "Matthew 21:22",
+   "Luke 15:31",
+   "Mark 10:46",
+   "Romans 10:9"
+  ],
+  "chapters": [
+   {
+    "t": 0,
+    "label": "Renew your mind"
+   },
+   {
+    "t": 180,
+    "label": "Mark 11:23-24 and doubt"
+   },
+   {
+    "t": 420,
+    "label": "Matthew 21: all things"
+   },
+   {
+    "t": 520,
+    "label": "Claim your inheritance"
+   },
+   {
+    "t": 678,
+    "label": "Bartimaeus keeps crying out"
+   },
+   {
+    "t": 1410,
+    "label": "Be bold with the Word"
+   },
+   {
+    "t": 1890,
+    "label": "Be light and salt"
+   },
+   {
+    "t": 2190,
+    "label": "Obeying the Holy Spirit"
+   },
+   {
+    "t": 2330,
+    "label": "Receive Jesus prayer"
+   }
+  ],
+  "transcript": "transcripts/ep46_2026-11-26_thursday-service.vtt",
+  "duration_s": 2465.601,
+  "fb_video": "1159658489885660",
+  "yt_video": null
+ },
+ {
   "file": "ep45_2026-11-25_wednesday-service.mp3",
   "ep": 45,
   "host": "release",
